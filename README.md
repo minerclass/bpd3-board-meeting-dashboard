@@ -2,6 +2,8 @@
 
 This repository hosts a standalone, browser-based dashboard for Beach Park School District 3 board meeting information for the 2025-26 school year.
 
+Latest local content update: May 13, 2026, using the public May 11, 2026 agenda notice and agenda PDF linked from the BPD3 live feed.
+
 ## Contents
 
 - `index.html` - the complete dashboard, including timeline, category filters, meeting cards, links to public BPD3 board resources, and local page interactions.
