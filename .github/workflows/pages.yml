@@ -1,0 +1,52 @@
+name: Deploy to GitHub Pages
+
+# Replaces the legacy branch-based Pages build, which hung repeatedly across
+# this account: the build job sat with updated_at never advancing past
+# created_at, and only a cancel plus a manual
+# `POST /repos/:owner/:repo/pages/builds` cleared it. This path publishes the
+# site as an artifact instead, so a stuck run is visible and re-runnable from
+# the Actions tab.
+#
+# This site publishes from main, so the workflow lives on that branch. A
+# push event runs the workflow file from the branch that was pushed.
+
+on:
+  push:
+    branches: [main]
+  # Lets a stuck or superseded deploy be re-run without an empty commit.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never cancel a deploy that is already publishing. A cancelled deploy-pages run
+# can leave the Pages environment mid-update, which is the failure mode this
+# workflow exists to avoid.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - uses: actions/configure-pages@v6
+
+      # Static files, no build step. This publishes the same tree the legacy
+      # build served. upload-pages-artifact excludes .git and .github itself.
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: .
+
+      - id: deployment
+        uses: actions/deploy-pages@v5
