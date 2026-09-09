@@ -8,14 +8,23 @@ Everything on the page comes from public district sources:
 
 - [School Board Meetings](https://www.bpd3.org/page/board-of-education-school-board-meetings) — the annual schedule
 - [Regular Board Meetings](https://www.bpd3.org/o/bpd3/page/regular-board-meeting) — agendas, minutes, and meeting location
+- [Archived School Board Agenda and Minutes](https://www.bpd3.org/documents/bpd3-district/board-of-education/board-of-education-files/archived-school-board-agenda-and-minutes/23154934) — prior years
+
+Every archived meeting card is summarized from that meeting's **approved minutes**,
+which are linked from the card itself. Routine recurring items (roll call, pledge,
+agenda approval, monthly bills, reports accepted without questions, FOIA counts) are
+omitted unless the board discussed them. Individual staff appointments, resignations
+and leaves are covered by the personnel report and are not itemized; leadership
+appointments and board membership changes are.
 
 ## Contents
 
 | Path | Purpose |
 | --- | --- |
 | `index.html` | The complete dashboard — timeline, filters, meeting cards, and local page interactions. |
-| `scripts/schedule.json` | The schedule data, mirrored into the `#mtg-data` block inside `index.html`. |
-| `scripts/update_schedule.py` | Re-reads bpd3.org and updates both files. Standard library only. |
+| `scripts/schedule.json` | Current-year schedule, mirrored into the `#mtg-data` block inside `index.html`. |
+| `scripts/archive-2025-26.json` | Closed-year meeting summaries, mirrored into the `#mtg-archive` block. Hand-maintained; the updater never touches it. |
+| `scripts/update_schedule.py` | Re-reads bpd3.org and updates the current-year files. Standard library only. |
 | `.github/workflows/update-schedule.yml` | Runs the updater daily and commits any change. |
 | `.github/workflows/pages.yml` | Publishes the site to GitHub Pages on every push to `main`. |
 
@@ -61,6 +70,20 @@ hand-edit in `scripts/schedule.json` and survive every run:
 
 After editing the JSON, run `python scripts/update_schedule.py` to copy it into
 `index.html`.
+
+## Closing out a school year
+
+When a year ends, move its meetings into an archive file so the summaries stay put:
+
+1. Copy `scripts/schedule.json` to `scripts/archive-<year>.json` and add a
+   `provenance` line describing what the summaries are drawn from.
+2. Fill in each meeting's `items` and `detail` from the **approved minutes**, not
+   the agenda — agendas list what was proposed, minutes record what the board
+   actually did. Set `sourceNote` to name the minutes you used.
+3. Add the block to `index.html` next to `#mtg-archive` and render it the same way.
+
+Archive files are never written by the updater, so anything reconciled by hand
+stays reconciled.
 
 Meetings with no `items` render an "agenda not yet published" placeholder rather
 than a summary, so an upcoming meeting is never shown as though it has already

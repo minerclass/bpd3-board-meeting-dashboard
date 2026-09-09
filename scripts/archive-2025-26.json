@@ -1,0 +1,555 @@
+{
+  "year": "2025-26",
+  "yearLabel": "2025–26",
+  "source": "https://www.bpd3.org/documents/bpd3-district/board-of-education/board-of-education-files/archived-school-board-agenda-and-minutes/2025-26/29268943",
+  "updated": "2026-09-09",
+  "provenance": "Every card below is summarized from the district's own approved minutes for that meeting, linked on each card. Routine items that recur at every meeting (roll call, pledge, approval of the agenda, monthly bills and financials, building and department reports accepted without questions, FOIA counts) are omitted unless the board discussed them. Individual staff appointments, resignations and leaves are covered by the personnel report and are not itemized here; leadership appointments and board membership changes are.",
+  "defaults": {
+    "time": "6:30 PM",
+    "location": "Beach Park Middle School",
+    "address": "40667 N. Green Bay Rd., Beach Park, IL 60099"
+  },
+  "meetings": [
+    {
+      "date": "2025-08-11",
+      "label": "August 11, 2025",
+      "month": "August 2025",
+      "short": "Aug 11",
+      "mon": "Aug",
+      "type": "Regular",
+      "special": null,
+      "time": "6:28–6:55 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/11565954-ddfc-4961-aa38-70f971ad0b2f/8.11.2025-Regular-Board-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/c8bb6ede-a4e8-4dc6-98e9-06719d599336/8.11.2025-Regular-Board-Meeting-Minutes.pdf",
+      "cats": ["finance", "personnel", "facilities", "community"],
+      "items": [
+        "FY26 Tentative Budget presented and placed on public display, with the hearing set for September 15",
+        "Back to School Bash drew over 4,500 students, families and community members",
+        "School Treasurer Surety Bond approved",
+        "New Hire Orientation welcomed over 20 new staff; institute days set for August 18–19",
+        "District Social Worker Nicholle Petts recognized for a Regional Office of Education award"
+      ],
+      "detail": {
+        "Finance": [
+          "Director of Business Frank Adams presented the FY26 Tentative Budget as required by Illinois School Code",
+          "Projected revenues included $21.8M from local property taxes and $16.3M in state Evidence-Based Funding, plus Title I and IDEA federal grants",
+          "Expenditures driven by personnel, insurance increases, higher special education costs, and operations and transportation",
+          "Budget included a $2M transfer from the Education Fund to the Capital Projects Fund toward a future Oak Crest Elementary gymnasium",
+          "Board approved placing the tentative budget on public display and publishing the required newspaper notice",
+          "School Treasurer Surety Bond approved"
+        ],
+        "Superintendent's Report": [
+          "Assistant Principal John Rovenolt presented his internship leadership plan, aligned to the district Strategic Plan",
+          "Back to School Bash: 25 food truck vendors, 45 community organizations, and 30 district staff volunteers",
+          "New Hire Orientation for over 20 new staff, led by Teaching and Learning with HR, Student Services and Technology",
+          "Teacher Institute Days August 18–19, themed \"Spark Curiosity; Ignite Core Memories\""
+        ],
+        "Committee Reports": [
+          "Long-Range Planning: work continuing on the Oak Crest signage project",
+          "Finance: reviewed the 2026 budget and the School Treasurer Surety Bond",
+          "SEDOL: continuous improvement plan progressing, support staff bargaining agreement extended, summer Extended School Year program enrolled over 500 students"
+        ],
+        "Consent Agenda": [
+          "Monthly financials for bills through June 16, 2025",
+          "Personnel report, including the appointments of Brian Barsotti as Principal of Kenneth Murphy Elementary and Timothy Jansky as Director of Buildings and Grounds"
+        ],
+        "Also Noted": [
+          "Two FOIA requests received",
+          "The board determined a closed session was not necessary"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of August 11, 2025."
+    },
+    {
+      "date": "2025-09-15",
+      "label": "September 15, 2025",
+      "month": "September 2025",
+      "short": "Sep 15",
+      "mon": "Sep",
+      "type": "Regular",
+      "special": "Budget Hearing",
+      "time": "6:31–7:19 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/cfd1e31b-155a-4f64-b03c-523997242519/9.15.2025-Regular-Board-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/80eebc8f-91af-4e7b-b988-4d986444147b/9.15.2025-Regular-Board-Meeting-Minutes.pdf",
+      "cats": ["finance", "personnel", "facilities", "policy", "community"],
+      "items": [
+        "Public hearing held on the proposed FY26 budget; the 2025–2026 Budget was then adopted",
+        "Resolution approved to transfer $2,000,000 from the Education Fund to the Capital Projects Fund",
+        "2025–2026 Board Goals approved, along with the Student Resource Officer contract",
+        "Change order approved for structural framing installation at the bus garage",
+        "Superintendent introduced the new District Champion Award and a board building-visit plan"
+      ],
+      "detail": {
+        "Budget Hearing (6:31–6:38 PM)": [
+          "Frank Adams presented the FY26 budget hearing under 105 ILCS 5/17-1, following 30 days of public display",
+          "Changes from tentative to final reflected Evidence-Based Funding tier updates, CPPRT estimates, grant allocations and the pupil transportation claim",
+          "The FY26 budget reflects a deficit; Mr. Adams reported the district remains financially stable",
+          "Final budget to be submitted to ISBE and filed with the Lake County Clerk"
+        ],
+        "Action Items": [
+          "2025–2026 Budget adopted",
+          "2025–2026 Student Resource Officer Contract approved",
+          "FY25 Administrator and Teachers Salary and Benefits Report approved",
+          "FY26 IMRF Salaries and Benefits Exceeding $75,000 approved",
+          "Resolution to transfer $2,000,000 from the Education Fund to the Capital Projects Fund approved",
+          "Change order A101-2017 for structural framing installation at the bus garage approved",
+          "2025–2026 Board Goals approved"
+        ],
+        "Superintendent's Report": [
+          "Action plans presented to support the 2025–2026 Board Goals",
+          "Board members to visit each school twice during the year, leaving notes with a CORE memory ball",
+          "New District Champion Award announced, with the first awards to be presented at the October meeting"
+        ],
+        "Also Noted": [
+          "Long-Range Planning reported on the Kenosha Road project and the pending Oak Crest sign installation",
+          "Daniel Green of Illinois Shines addressed the board about their solar program",
+          "Four FOIA requests received",
+          "Closed session held 6:50–7:14 PM on employment matters"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of September 15, 2025."
+    },
+    {
+      "date": "2025-10-20",
+      "label": "October 20, 2025",
+      "month": "October 2025",
+      "short": "Oct 20",
+      "mon": "Oct",
+      "type": "Regular",
+      "special": null,
+      "time": "5:53–7:05 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/ce03898b-4f89-491e-a727-802826012ec9/10.20.2025-Regular-Board-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/991b3de6-ac2b-4d06-8152-e7553c88aa51/10.20.2025-Regular-Board-Meeting-Minutes.pdf",
+      "cats": ["finance", "personnel", "facilities", "policy", "community"],
+      "items": [
+        "Staff recognition programs launched: Positive Descriptive Praise and monthly Staff Spotlight",
+        "Board reviewed the IASB 2025 Resolutions Committee Report ahead of the Delegate Assembly",
+        "Oak Crest garage renovation reported complete; outdoor sign still pending",
+        "Finance Committee reviewed the proposal for the coming month's tax levy",
+        "Consent agenda approved, including September regular and closed session minutes"
+      ],
+      "detail": {
+        "Superintendent's Report": [
+          "A parent email was shared praising Stephanie Meek, Principal of Beach Park Middle School",
+          "Positive Descriptive Praise: principals select five examples of praise each month to read at a board meeting",
+          "Staff Spotlight: one staff member per school highlighted monthly in the district newsletter and at a board meeting",
+          "First District Champion Awards moved to the November board meeting",
+          "IASB 2025 Resolutions Committee Report released; Mrs. Geisser serves as the district's registered delegate for the November 22 Delegate Assembly",
+          "Board and directors scheduled to attend the Triple I Conference November 20–23, with Dr. Wilcox and Mr. Adams presenting"
+        ],
+        "Committee Reports": [
+          "Long-Range Planning: Oak Crest garage renovation complete; outdoor sign installation date not yet set",
+          "Finance: reviewed bills and the proposal for next month's levy"
+        ],
+        "Also Noted": [
+          "Closed session held first, 5:56–6:28 PM, on employment matters",
+          "Four of seven board members present; enrollment and discipline reports received without questions",
+          "Six FOIA requests received",
+          "Daniel Green of Illinois Shines again addressed the board about their solar program"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of October 20, 2025."
+    },
+    {
+      "date": "2025-11-17",
+      "label": "November 17, 2025",
+      "month": "November 2025",
+      "short": "Nov 17",
+      "mon": "Nov",
+      "type": "Regular",
+      "special": null,
+      "time": "6:30–8:11 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/40975daf-d7c0-47ec-b9bc-a9e6505f3a41/11.17.2025-Regular-Board-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/15dded69-b569-418d-9f7f-0439623b1081/11.17.2025-Regular-Meeting-Minutes.pdf",
+      "cats": ["finance", "curriculum", "policy", "community"],
+      "items": [
+        "External auditor presented the annual audit and federal single audit with no findings to report",
+        "School Improvement Plans presented by all five principals and approved",
+        "2024–2025 state designations shared: four schools Commendable, one Targeted",
+        "Tentative 2025 tax levy presented at 3.37% over the prior extension",
+        "Joint Board Safety Notification Protocol and Tiered Case Management approved"
+      ],
+      "detail": {
+        "Audit": [
+          "Jeff Rollefson, CPA of Evans, Marshall & Pease, P.C. presented the financial statements and the federal single audit",
+          "The financial report was consistent with prior years, and the district complied with federal requirements with no findings to report"
+        ],
+        "School Improvement Plans": [
+          "SIPs aligned to Strategic Plan priorities: academic growth, equitable access to rigorous curriculum, recruitment and retention, welcoming and safe culture, resource allocation, and community partnerships",
+          "Oak Crest: 63% of students to meet growth targets in ELA and 66% in math; reduce Tier II and Tier III intervention counts",
+          "Howe: 56% of students to meet or exceed i-Ready growth targets in reading and math; daily morning meetings and Second Step lessons in all classrooms by May 2026",
+          "Kenneth Murphy: all K–5 teachers implementing the ELA curriculum with 90% fidelity by May 2026; 30% reduction in behavioral referrals",
+          "Newport: students meeting or exceeding i-Ready growth goals; improve climate and culture through family engagement events",
+          "BPMS: growth and grade-level targets on i-Ready, plus a 10% decrease in office-managed log entries"
+        ],
+        "2024–2025 Designations": [
+          "Newport, BPMS, Kenneth Murphy and Oak Crest each designated Commendable; Howe designated Targeted for one subgroup of just over 20 students",
+          "Newport increased its overall index score by 13.43, from 52.01 to 65.44",
+          "BPMS earned Commendable for a second consecutive year",
+          "Kenneth Murphy moved into Commendable status, with ELA scores up 13 points",
+          "Oak Crest English Learner proficiency growth on IAR rose from 60.23 to 70.61"
+        ],
+        "Tentative Levy": [
+          "Frank Adams presented the tentative 2025 levy for review",
+          "Extension limited by PTELL to the lesser of 5.0% or CPI, plus new property; the applicable 2025 CPI is 2.9%",
+          "Administration proposed a levy request 3.37% over the prior year's extension, intentionally overestimated to capture revenue from new construction",
+          "Cost pressures cited: pending union contract renegotiations, health insurance increases of 15% to 35%, purchased services, building maintenance, and special education"
+        ],
+        "Action Items": [
+          "Donation in excess of $500 approved",
+          "School Improvement Plans approved",
+          "Joint Board Safety Notification Protocol / Tiered Case Management approved",
+          "Board approved supporting the IASB resolution on school bus safety funding and all ten proposed constitutional amendments"
+        ],
+        "Also Noted": [
+          "Positive Descriptive Praise, Staff Spotlight and the first District Champion Award recipients honored in person",
+          "November recognized as School Board Member Appreciation Month",
+          "Thanksgiving break November 26–29"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of November 17, 2025."
+    },
+    {
+      "date": "2025-12-15",
+      "label": "December 15, 2025",
+      "month": "December 2025",
+      "short": "Dec 15",
+      "mon": "Dec",
+      "type": "Regular",
+      "special": "Levy Hearing",
+      "time": "6:30–7:50 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/6cced032-9b22-4a87-b9bd-9f5997ab6b49/12.15.2025-Regular-Board-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/333aa29e-aa30-4e20-ad03-d30affaf79c3/12.15.2025-Regular-Meeting-Minutes.pdf",
+      "cats": ["finance", "personnel", "policy", "curriculum"],
+      "items": [
+        "Truth in Taxation levy hearing held; the 2025 Tax Levy was then adopted",
+        "Twenty-one PRESS policies approved on second reading",
+        "One additional 1.0 FTE Special Education Resource Teacher approved for Howe Elementary",
+        "Closed session minutes reviewed for release, continued confidentiality, and recording destruction",
+        "Winter i-Ready testing underway, with a data presentation planned for February or March"
+      ],
+      "detail": {
+        "Levy Hearing (6:30–6:43 PM)": [
+          "Frank Adams presented the 2025 Final Tax Levy at the statutory Truth in Taxation hearing",
+          "Levy assumptions: an estimated 3.19% increase over the 2024 extension, roughly 10% growth in Equalized Assessed Valuation, and about $3.1 million in new construction",
+          "Cost drivers cited: inflation in purchased services and supplies, continuation of after-school and summer programs, collective bargaining negotiations, and rising health insurance costs",
+          "No public comments were received during the hearing"
+        ],
+        "Action Items": [
+          "2025 Tax Levy adopted",
+          "One (1.0) FTE Special Education Resource Teacher approved for Howe Elementary",
+          "Twenty-one PRESS policies approved, covering targeted school violence, student discipline, curriculum content, access to electronic networks, bullying, suspension and expulsion procedures, student records, and visitors to school property",
+          "Closed session minutes reviewed: some kept confidential, others released for public inspection, and eligible audio recordings approved for destruction"
+        ],
+        "Policy Pipeline": [
+          "Second reading completed on the twenty-one policies adopted this evening",
+          "Twenty further policies reviewed for approval at the January meeting, covering ethics and gift ban, board officer duties, fiscal and business management, purchases and contracts, food services, facility management, residence, attendance and truancy, and student behavior"
+        ],
+        "Also Noted": [
+          "Winter i-Ready testing began, with results to be presented at the February or March board meeting",
+          "Winter break December 22 through January 2; staff return January 5 and students January 6",
+          "SEDOL approved hiring Dr. Thomas as Superintendent and a restructured tuition model",
+          "Five FOIA requests received; closed session held 7:21–7:46 PM"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of December 15, 2025."
+    },
+    {
+      "date": "2026-01-12",
+      "label": "January 12, 2026",
+      "month": "January 2026",
+      "short": "Jan 12",
+      "mon": "Jan",
+      "type": "Regular",
+      "special": null,
+      "time": "6:34–7:07 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/f926cbf3-0fc1-4516-baaf-0c802820f668/1.12.2026-Regular-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/2e0e2410-bddc-410d-a135-5e54066d1a5a/1.12.2026-Regular-Meeting-Minutes.pdf",
+      "cats": ["policy", "facilities", "community"],
+      "items": [
+        "Twenty PRESS policies approved on second reading",
+        "Summer project list reviewed: Newport concrete repairs, Kenneth Murphy tuckpointing, and BPMS Phase 3 carpet replacement",
+        "Eleven further policies introduced for February approval",
+        "Community events announced: Superintendent coffee, State of Education, and the Foundation kickoff",
+        "No closed session was needed; the meeting ran just over thirty minutes"
+      ],
+      "detail": {
+        "Action Items": [
+          "Twenty PRESS policies approved, covering ethics and gift ban, board officer qualifications and duties, board member development, board communications, fiscal and business management, revenue and investments, incurring debt, purchases and contracts, accounting and audits, food services, facility management, environmental quality, expenses, admissions and transfers, residence, attendance and truancy, teen dating violence, student behavior, administering medicines, and elementary publications"
+        ],
+        "Committee Reports": [
+          "Long-Range Planning reviewed the summer project list: Newport concrete repairs, Kenneth Murphy tuckpointing, and Middle School Phase 3 carpet replacement",
+          "Finance reviewed and approved the bills"
+        ],
+        "Policy Pipeline": [
+          "Eleven policies reviewed for February approval, covering legal status, district organization, philosophy, governance, board member oath and conduct, board-superintendent relationship, policy development, payment procedures, procurement cards, pandemic preparedness, and connection with the community"
+        ],
+        "Also Noted": [
+          "District closed January 19 for Martin Luther King Jr.'s birthday",
+          "Superintendent coffee January 20; State of Education at the BPMS cafe January 22; Foundation kickoff January 29",
+          "Three FOIA requests received",
+          "A closed session was on the agenda but was not convened, as no items required discussion"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of January 12, 2026."
+    },
+    {
+      "date": "2026-02-09",
+      "label": "February 9, 2026",
+      "month": "February 2026",
+      "short": "Feb 9",
+      "mon": "Feb",
+      "type": "Regular",
+      "special": null,
+      "time": "6:31–8:00 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/b4e6c478-4aea-4166-9348-2d2c39f4b629/2.9.2026-Regular-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/95a759d8-02da-4fe1-9432-3371e2a4e090/2.9.2026-Regular-Meeting-Minutes.pdf",
+      "cats": ["facilities", "policy", "personnel", "community"],
+      "items": [
+        "District received the Devoted to Wellness Silver Award through the EBC Wellbeing Incentive Program",
+        "Exterior wall remediation contract for Kenneth Murphy Elementary awarded to Otto Baum Company, Inc.",
+        "Eleven PRESS policies approved on second reading",
+        "Multicultural Festival announced for April 11 at BPMS, in person with a live-stream option",
+        "2026–2027 registration to open the week of March 16"
+      ],
+      "detail": {
+        "Recognition": [
+          "Devoted to Wellness Silver Award presented by Allison Evors, Benefits Consultant with Gallagher Benefit Services",
+          "District Benefits Coordinator Veronica Tano accepted the award and presented certificates of appreciation to the Wellness Committee"
+        ],
+        "Action Items": [
+          "Eleven PRESS policies approved, covering legal status, district organization, philosophy, governance, board member oath and conduct, board-superintendent relationship, policy development, payment procedures, procurement cards, pandemic preparedness, and connection with the community",
+          "Bid awarded to Otto Baum Company, Inc. for Kenneth Murphy Elementary School Exterior Wall Remediation (Phase 2)"
+        ],
+        "Superintendent's Report": [
+          "The proposed 2026–2027 school calendar was developed with union leadership, with approval to be sought in March",
+          "2026–2027 registration opens the week of March 16; proof of residency required",
+          "Multicultural Festival \"Together We Celebrate District 3\" set for April 11, 9:00 a.m. to 2:00 p.m. at BPMS, held in person after community survey feedback"
+        ],
+        "Also Noted": [
+          "Closed session held first, 6:34–7:27 PM, on employment matters and closed session minutes",
+          "Long-Range Planning reviewed qualified bidders for the Kenneth Murphy tuckpointing work",
+          "Nine further policies introduced for a later approval",
+          "Six FOIA requests received"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of February 9, 2026."
+    },
+    {
+      "date": "2026-03-16",
+      "label": "March 16, 2026",
+      "month": "March 2026",
+      "short": "Mar 16",
+      "mon": "Mar",
+      "type": "Regular",
+      "special": null,
+      "time": "6:37–8:27 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/bc416257-a121-416b-ba87-2c9ec71bcf00/3.16.2026-Regular-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/5502a867-6692-4af3-9a73-c1d5b5cf8a4a/3.16.2026-Regular-Meeting-Minutes.pdf",
+      "cats": ["policy", "facilities", "personnel", "curriculum", "community"],
+      "items": [
+        "District 3 Discipline Improvement Plan approved",
+        "Newport concrete improvement contract awarded to Chadwick Contracting Company",
+        "Memorandum of Understanding to hire a social worker approved",
+        "Nine PRESS policies approved on second reading",
+        "2026–2027 calendar revisions presented; registration opened March 16"
+      ],
+      "detail": {
+        "Action Items": [
+          "Nine PRESS policies approved, covering chain of command, nonpublic school students, release during school hours, student rights and responsibilities, search and seizure, extracurricular athletics, student fundraising, gifts to the district, and public suggestions and concerns",
+          "District 3 Discipline Improvement Plan approved",
+          "Contract awarded to Chadwick Contracting Company for concrete improvement at Newport",
+          "Memorandum of Understanding to hire a social worker approved"
+        ],
+        "Superintendent's Report": [
+          "2026–2027 calendar revisions: Election Day added as a non-attendance day, the November School Improvement Day moved to November 10, and Veterans Day designated a student attendance day with planned activities",
+          "Calendar to be brought back for approval at the April meeting",
+          "2026–2027 registration opened March 16, with SnapCodes emailed to parents",
+          "Multicultural Festival confirmed for April 11, 9:00 a.m. to 2:00 p.m. at BPMS",
+          "Spring break March 23–27, with the district office remaining open",
+          "The SIP data presentation was postponed to a later meeting"
+        ],
+        "Committee Reports": [
+          "Long-Range Planning recommended approval of the Newport concrete repairs supporting the gas meter",
+          "Finance reviewed school fees and fee collection strategies, the social workers MOU, and the Newport concrete work"
+        ],
+        "Also Noted": [
+          "Three FOIA requests received",
+          "Closed session held 7:02–8:22 PM on employment matters and closed session minutes"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of March 16, 2026."
+    },
+    {
+      "date": "2026-04-13",
+      "label": "April 13, 2026",
+      "month": "April 2026",
+      "short": "Apr 13",
+      "mon": "Apr",
+      "type": "Regular",
+      "special": null,
+      "time": "6:30–7:46 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/0567374b-2d6e-419c-9b01-9c0eaaff3a57/4.13.2026-Regular-Board-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/b244c1f4-70e7-4f22-ab6f-80e8cd16c379/4.13.2026-Regular-Meeting-Minutes.pdf",
+      "cats": ["personnel", "policy", "facilities", "community"],
+      "items": [
+        "2026–2027 School Calendar approved",
+        "2026–2027 Board Meeting Dates approved — the schedule this dashboard now tracks",
+        "Registration for IESA participation approved",
+        "Administrator contract approved for Raymond Porten",
+        "Summer facilities contracts reported in progress and scheduled to begin over the summer"
+      ],
+      "detail": {
+        "Action Items": [
+          "2026–2027 School Calendar approved after board feedback",
+          "2026–2027 Board Meeting Dates approved",
+          "Registration for IESA participation approved",
+          "Administrator contract for Raymond Porten approved"
+        ],
+        "Also Noted": [
+          "Dr. Wilcox was absent; Director of Human Resources Mr. Cappozzo presented the Superintendent's Report",
+          "Long-Range Planning reported contracts discussed at the prior meeting are in progress and scheduled to begin over the summer",
+          "Five FOIA requests received",
+          "Closed session held 6:55–7:41 PM on employment matters"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of April 13, 2026."
+    },
+    {
+      "date": "2026-05-11",
+      "label": "May 11, 2026",
+      "month": "May 2026",
+      "short": "May 11",
+      "mon": "May",
+      "type": "Regular",
+      "special": null,
+      "time": "6:33–9:10 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/da472170-d291-4e41-b83e-10670841f741/5.11.2026-Regular-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/fb9dbc57-c2dc-402e-8bf8-ecacbb79d0a7/5.11.2026-Regular-Board-Meeting-Minutes.pdf",
+      "cats": ["finance", "curriculum", "facilities", "policy", "community"],
+      "items": [
+        "Fall-to-winter i-Ready data presented: districtwide gains in ELA and math grade-level proficiency",
+        "Tentative Amended FY26 Budget presented and placed on public display",
+        "2026–2027 student fees and the 2025–2026 final calendar approved",
+        "ISBE Consolidated District Plan Application for 2026–2027 approved",
+        "Resolution approved to certify a County School Facility Occupation Tax proposition"
+      ],
+      "detail": {
+        "i-Ready / SIP Data": [
+          "Director of Teaching and Learning Traci Griffiths presented fall-to-winter i-Ready assessment data",
+          "Against a district goal of 53% of students meeting projected growth targets in ELA and math, overall growth was near or at target across most schools and grade levels",
+          "Districtwide, students at or above grade level increased in both ELA and math, while students one or more grade levels below expectations decreased",
+          "First-year curriculum implementation challenges were discussed, supported by professional development and instructional coaching",
+          "Celebrations included growth in mathematics and progress among kindergarten students; next steps include reviewing spring i-Ready data and updating curriculum frameworks"
+        ],
+        "Budget Amendment": [
+          "Frank Adams presented the Tentative Amended FY26 Budget",
+          "The amendment was required to comply with Section 17-1.5 of the Illinois School Code, which limits administrative expenditure growth to 5% over the prior year; the original budget reflected a 6% increase",
+          "The original budget projected a $61,100 deficit; the amended budget reflects a $59,601 deficit, an improvement of about $1,500",
+          "Next steps: 30 days on public display, published hearing notice, a June budget hearing, and submission to ISBE and the Lake County Clerk"
+        ],
+        "Action Items": [
+          "Resolution to certify a proposition for a County School Facility Occupation Tax approved",
+          "ISBE Consolidated District Plan Application for 2026–2027 approved",
+          "FY26 Tentative Amended Budget placed on public display with required newspaper notice",
+          "2026–2027 student fees approved",
+          "2025–2026 final calendar approved",
+          "The board acted on a student disciplinary review considered in closed session"
+        ],
+        "Also Noted": [
+          "8th grade graduation set for May 26 at the Genesee Theatre; summer hours begin June 1 with the district office closed Fridays",
+          "Long-Range Planning: the district continues to seek a contractor for the Kenosha Road property demolition, and the Oak Crest street sign remains pending",
+          "Two FOIA requests received",
+          "Closed session held 7:10–8:55 PM on employment and student disciplinary matters"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of May 11, 2026."
+    },
+    {
+      "date": "2026-06-15",
+      "label": "June 15, 2026",
+      "month": "June 2026",
+      "short": "Jun 15",
+      "mon": "Jun",
+      "type": "Regular",
+      "special": "Budget Hearing",
+      "time": "6:29–7:03 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/c2d97d14-f532-4d14-8cfc-7a62b8a82870/6.15.2026-Regular-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/fa9a01e2-6c7a-4dc2-b44f-9f22a839c5cb/6.15.2026-Regular-Meeting-Minutes.pdf",
+      "cats": ["finance", "personnel", "facilities", "community"],
+      "items": [
+        "Public hearing held on the Amended FY26 Budget, which was then adopted",
+        "Intergovernmental agreement approved with the Lake County ROE for the Alternative Learning Opportunities Program",
+        "Board acknowledged the resignation of member Kory Geisser, effective June 30, 2026",
+        "Food service contract extension, hazardous routes resolution and treasurer's surety bond approved",
+        "Registration for 2026–2027 reported at over 60% of students as of June 9"
+      ],
+      "detail": {
+        "Budget Hearing (6:29–6:32 PM)": [
+          "Frank Adams presented the Amended FY26 Budget, required to comply with the administrative cost limitation under Section 17-1.5 of the Illinois School Code",
+          "The original FY26 budget projected a $61,100 deficit; the amended budget reflects a $59,601 deficit, an improvement of $1,498",
+          "The final amended budget to be submitted to ISBE and filed with the Lake County Clerk",
+          "No questions or comments were received from visitors"
+        ],
+        "Action Items": [
+          "Amended FY26 Budget approved",
+          "2026–2027 Hazardous Routes Resolution approved",
+          "Food service contract extension approved",
+          "Resolution authorizing the prompt payment of bills approved",
+          "Treasurer's surety bond approved",
+          "2026–2027 Assistant Principal contract for Oak Crest School approved",
+          "Intergovernmental agreement with the Lake County Regional Office of Education for the Alternative Learning Opportunities Program approved"
+        ],
+        "Superintendent's Report": [
+          "District Champion Award recipients for April recognized",
+          "Back to School Bash planned for August 3, 2026, 4:00–6:30 p.m. at Zion-Benton Township High School",
+          "Board retreat scheduled for June 22; no regular board meeting in July",
+          "Over 60% of students registered for 2026–2027 as of June 9",
+          "ALOP would support students with attendance, behavioral, social-emotional or mental health concerns at no cost to the district"
+        ],
+        "Board Membership": [
+          "The board acknowledged the resignation of board member Mr. Kory Geisser, effective June 30, 2026"
+        ],
+        "Also Noted": [
+          "Five FOIA requests received",
+          "Closed session held 6:44–6:58 PM on employment matters"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of June 15, 2026."
+    },
+    {
+      "date": "2026-06-22",
+      "label": "June 22, 2026",
+      "month": "June 2026",
+      "short": "Jun 22",
+      "mon": "Jun",
+      "type": "Special",
+      "special": "Special Meeting",
+      "time": "8:33 AM and 1:30 PM sessions",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/3fa81322-8f1d-4b68-a74d-b1e0d0e1068c/6.22.2026-Special-Board-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/b70813ed-0b63-4548-91f9-a7fa6b002fe5/6.22.2026-Special-Board-Morning-Session-Minutes.pdf",
+      "cats": ["personnel", "policy"],
+      "items": [
+        "Two special sessions held: a morning board retreat and an afternoon meeting to fill the board vacancy",
+        "Erika Snediker appointed to fill the vacant board position",
+        "Morning retreat held in closed session at The Shanty in Wadsworth, 8:35–11:42 a.m.",
+        "Afternoon session interviewed candidates for the board vacancy at the district office"
+      ],
+      "detail": {
+        "Morning Session — Board Retreat": [
+          "Special meeting convened at The Shanty in Wadsworth at 8:33 a.m.",
+          "Board adjourned to closed session for the retreat, 8:35–11:42 a.m., and adjourned immediately on returning to open session"
+        ],
+        "Afternoon Session — Board Vacancy": [
+          "Special meeting convened at the district office at 1:30 p.m.",
+          "Board adjourned to closed session to interview candidates to fill the Board of Education vacancy",
+          "On returning to open session, the board approved the appointment of Erika Snediker to fill the vacant position"
+        ],
+        "Follow-on": [
+          "The oath of office was administered to Mrs. Snediker at the August 10, 2026 regular meeting"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of the June 22, 2026 special meetings. The afternoon session minutes are posted separately in the district archive."
+    }
+  ]
+}

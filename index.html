@@ -149,7 +149,12 @@ body{font-family:'Inter',sans-serif;background:#f0fafa;color:#1a1a2e;}
 .yrh{font-size:1rem;font-weight:800;color:var(--navy);margin:6px 0 12px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
 .yrh.arch{margin-top:30px;padding-top:20px;border-top:2px solid #d8eeee;}
 .archtog{padding:5px 12px;font-size:.7rem;cursor:pointer;}
-.archnote{font-size:.75rem;color:#6b7f7f;margin:-6px 0 14px;line-height:1.6;}
+.archnote{font-size:.75rem;color:#6b7f7f;margin:-4px 0 16px;line-height:1.7;max-width:80ch;}
+.archnote p{margin-bottom:9px;}
+.archcats{display:flex;flex-wrap:wrap;gap:7px;}
+.archcat{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid #d8eeee;
+  border-radius:999px;padding:4px 11px;font-size:.7rem;color:#2c3d3d;}
+.archcat strong{color:var(--navy);}
 .archive-collapsed{display:none!important;}
 .pending{font-size:.78rem;color:#6b7f7f;line-height:1.6;background:#f8fcfc;border:1px dashed #cfe6e6;border-radius:8px;padding:11px 12px;}
 .srcnote{font-size:.68rem;color:#7b8f8f;line-height:1.6;margin-top:9px;font-style:italic;}
@@ -440,468 +445,566 @@ body{font-family:'Inter',sans-serif;background:#f0fafa;color:#1a1a2e;}
 <h2 class="yrh" id="cur-h">Current School Year</h2>
 <div class="cgrid" id="cgrid"></div>
 
-<!-- ARCHIVE -->
-<h2 class="yrh arch">
-  2025&ndash;26 Archive
-  <button class="bs bo2 archtog" onclick="toggleArchive()" id="archbtn">Show archive</button>
-</h2>
-<p class="archnote" id="archnote">Meeting summaries from the 2025&ndash;26 school year, retained for reference.</p>
-<div class="cgrid archive-collapsed" id="archive-grid">
+<!-- ARCHIVE (closed school years, reconciled against the district's approved minutes) -->
+<script type="application/json" id="mtg-archive">{
+  "year": "2025-26",
+  "yearLabel": "2025–26",
+  "source": "https://www.bpd3.org/documents/bpd3-district/board-of-education/board-of-education-files/archived-school-board-agenda-and-minutes/2025-26/29268943",
+  "updated": "2026-09-09",
+  "provenance": "Every card below is summarized from the district's own approved minutes for that meeting, linked on each card. Routine items that recur at every meeting (roll call, pledge, approval of the agenda, monthly bills and financials, building and department reports accepted without questions, FOIA counts) are omitted unless the board discussed them. Individual staff appointments, resignations and leaves are covered by the personnel report and are not itemized here; leadership appointments and board membership changes are.",
+  "defaults": {
+    "time": "6:30 PM",
+    "location": "Beach Park Middle School",
+    "address": "40667 N. Green Bay Rd., Beach Park, IL 60099"
+  },
+  "meetings": [
+    {
+      "date": "2025-08-11",
+      "label": "August 11, 2025",
+      "month": "August 2025",
+      "short": "Aug 11",
+      "mon": "Aug",
+      "type": "Regular",
+      "special": null,
+      "time": "6:28–6:55 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/11565954-ddfc-4961-aa38-70f971ad0b2f/8.11.2025-Regular-Board-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/c8bb6ede-a4e8-4dc6-98e9-06719d599336/8.11.2025-Regular-Board-Meeting-Minutes.pdf",
+      "cats": ["finance", "personnel", "facilities", "community"],
+      "items": [
+        "FY26 Tentative Budget presented and placed on public display, with the hearing set for September 15",
+        "Back to School Bash drew over 4,500 students, families and community members",
+        "School Treasurer Surety Bond approved",
+        "New Hire Orientation welcomed over 20 new staff; institute days set for August 18–19",
+        "District Social Worker Nicholle Petts recognized for a Regional Office of Education award"
+      ],
+      "detail": {
+        "Finance": [
+          "Director of Business Frank Adams presented the FY26 Tentative Budget as required by Illinois School Code",
+          "Projected revenues included $21.8M from local property taxes and $16.3M in state Evidence-Based Funding, plus Title I and IDEA federal grants",
+          "Expenditures driven by personnel, insurance increases, higher special education costs, and operations and transportation",
+          "Budget included a $2M transfer from the Education Fund to the Capital Projects Fund toward a future Oak Crest Elementary gymnasium",
+          "Board approved placing the tentative budget on public display and publishing the required newspaper notice",
+          "School Treasurer Surety Bond approved"
+        ],
+        "Superintendent's Report": [
+          "Assistant Principal John Rovenolt presented his internship leadership plan, aligned to the district Strategic Plan",
+          "Back to School Bash: 25 food truck vendors, 45 community organizations, and 30 district staff volunteers",
+          "New Hire Orientation for over 20 new staff, led by Teaching and Learning with HR, Student Services and Technology",
+          "Teacher Institute Days August 18–19, themed \"Spark Curiosity; Ignite Core Memories\""
+        ],
+        "Committee Reports": [
+          "Long-Range Planning: work continuing on the Oak Crest signage project",
+          "Finance: reviewed the 2026 budget and the School Treasurer Surety Bond",
+          "SEDOL: continuous improvement plan progressing, support staff bargaining agreement extended, summer Extended School Year program enrolled over 500 students"
+        ],
+        "Consent Agenda": [
+          "Monthly financials for bills through June 16, 2025",
+          "Personnel report, including the appointments of Brian Barsotti as Principal of Kenneth Murphy Elementary and Timothy Jansky as Director of Buildings and Grounds"
+        ],
+        "Also Noted": [
+          "Two FOIA requests received",
+          "The board determined a closed session was not necessary"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of August 11, 2025."
+    },
+    {
+      "date": "2025-09-15",
+      "label": "September 15, 2025",
+      "month": "September 2025",
+      "short": "Sep 15",
+      "mon": "Sep",
+      "type": "Regular",
+      "special": "Budget Hearing",
+      "time": "6:31–7:19 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/cfd1e31b-155a-4f64-b03c-523997242519/9.15.2025-Regular-Board-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/80eebc8f-91af-4e7b-b988-4d986444147b/9.15.2025-Regular-Board-Meeting-Minutes.pdf",
+      "cats": ["finance", "personnel", "facilities", "policy", "community"],
+      "items": [
+        "Public hearing held on the proposed FY26 budget; the 2025–2026 Budget was then adopted",
+        "Resolution approved to transfer $2,000,000 from the Education Fund to the Capital Projects Fund",
+        "2025–2026 Board Goals approved, along with the Student Resource Officer contract",
+        "Change order approved for structural framing installation at the bus garage",
+        "Superintendent introduced the new District Champion Award and a board building-visit plan"
+      ],
+      "detail": {
+        "Budget Hearing (6:31–6:38 PM)": [
+          "Frank Adams presented the FY26 budget hearing under 105 ILCS 5/17-1, following 30 days of public display",
+          "Changes from tentative to final reflected Evidence-Based Funding tier updates, CPPRT estimates, grant allocations and the pupil transportation claim",
+          "The FY26 budget reflects a deficit; Mr. Adams reported the district remains financially stable",
+          "Final budget to be submitted to ISBE and filed with the Lake County Clerk"
+        ],
+        "Action Items": [
+          "2025–2026 Budget adopted",
+          "2025–2026 Student Resource Officer Contract approved",
+          "FY25 Administrator and Teachers Salary and Benefits Report approved",
+          "FY26 IMRF Salaries and Benefits Exceeding $75,000 approved",
+          "Resolution to transfer $2,000,000 from the Education Fund to the Capital Projects Fund approved",
+          "Change order A101-2017 for structural framing installation at the bus garage approved",
+          "2025–2026 Board Goals approved"
+        ],
+        "Superintendent's Report": [
+          "Action plans presented to support the 2025–2026 Board Goals",
+          "Board members to visit each school twice during the year, leaving notes with a CORE memory ball",
+          "New District Champion Award announced, with the first awards to be presented at the October meeting"
+        ],
+        "Also Noted": [
+          "Long-Range Planning reported on the Kenosha Road project and the pending Oak Crest sign installation",
+          "Daniel Green of Illinois Shines addressed the board about their solar program",
+          "Four FOIA requests received",
+          "Closed session held 6:50–7:14 PM on employment matters"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of September 15, 2025."
+    },
+    {
+      "date": "2025-10-20",
+      "label": "October 20, 2025",
+      "month": "October 2025",
+      "short": "Oct 20",
+      "mon": "Oct",
+      "type": "Regular",
+      "special": null,
+      "time": "5:53–7:05 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/ce03898b-4f89-491e-a727-802826012ec9/10.20.2025-Regular-Board-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/991b3de6-ac2b-4d06-8152-e7553c88aa51/10.20.2025-Regular-Board-Meeting-Minutes.pdf",
+      "cats": ["finance", "personnel", "facilities", "policy", "community"],
+      "items": [
+        "Staff recognition programs launched: Positive Descriptive Praise and monthly Staff Spotlight",
+        "Board reviewed the IASB 2025 Resolutions Committee Report ahead of the Delegate Assembly",
+        "Oak Crest garage renovation reported complete; outdoor sign still pending",
+        "Finance Committee reviewed the proposal for the coming month's tax levy",
+        "Consent agenda approved, including September regular and closed session minutes"
+      ],
+      "detail": {
+        "Superintendent's Report": [
+          "A parent email was shared praising Stephanie Meek, Principal of Beach Park Middle School",
+          "Positive Descriptive Praise: principals select five examples of praise each month to read at a board meeting",
+          "Staff Spotlight: one staff member per school highlighted monthly in the district newsletter and at a board meeting",
+          "First District Champion Awards moved to the November board meeting",
+          "IASB 2025 Resolutions Committee Report released; Mrs. Geisser serves as the district's registered delegate for the November 22 Delegate Assembly",
+          "Board and directors scheduled to attend the Triple I Conference November 20–23, with Dr. Wilcox and Mr. Adams presenting"
+        ],
+        "Committee Reports": [
+          "Long-Range Planning: Oak Crest garage renovation complete; outdoor sign installation date not yet set",
+          "Finance: reviewed bills and the proposal for next month's levy"
+        ],
+        "Also Noted": [
+          "Closed session held first, 5:56–6:28 PM, on employment matters",
+          "Four of seven board members present; enrollment and discipline reports received without questions",
+          "Six FOIA requests received",
+          "Daniel Green of Illinois Shines again addressed the board about their solar program"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of October 20, 2025."
+    },
+    {
+      "date": "2025-11-17",
+      "label": "November 17, 2025",
+      "month": "November 2025",
+      "short": "Nov 17",
+      "mon": "Nov",
+      "type": "Regular",
+      "special": null,
+      "time": "6:30–8:11 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/40975daf-d7c0-47ec-b9bc-a9e6505f3a41/11.17.2025-Regular-Board-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/15dded69-b569-418d-9f7f-0439623b1081/11.17.2025-Regular-Meeting-Minutes.pdf",
+      "cats": ["finance", "curriculum", "policy", "community"],
+      "items": [
+        "External auditor presented the annual audit and federal single audit with no findings to report",
+        "School Improvement Plans presented by all five principals and approved",
+        "2024–2025 state designations shared: four schools Commendable, one Targeted",
+        "Tentative 2025 tax levy presented at 3.37% over the prior extension",
+        "Joint Board Safety Notification Protocol and Tiered Case Management approved"
+      ],
+      "detail": {
+        "Audit": [
+          "Jeff Rollefson, CPA of Evans, Marshall & Pease, P.C. presented the financial statements and the federal single audit",
+          "The financial report was consistent with prior years, and the district complied with federal requirements with no findings to report"
+        ],
+        "School Improvement Plans": [
+          "SIPs aligned to Strategic Plan priorities: academic growth, equitable access to rigorous curriculum, recruitment and retention, welcoming and safe culture, resource allocation, and community partnerships",
+          "Oak Crest: 63% of students to meet growth targets in ELA and 66% in math; reduce Tier II and Tier III intervention counts",
+          "Howe: 56% of students to meet or exceed i-Ready growth targets in reading and math; daily morning meetings and Second Step lessons in all classrooms by May 2026",
+          "Kenneth Murphy: all K–5 teachers implementing the ELA curriculum with 90% fidelity by May 2026; 30% reduction in behavioral referrals",
+          "Newport: students meeting or exceeding i-Ready growth goals; improve climate and culture through family engagement events",
+          "BPMS: growth and grade-level targets on i-Ready, plus a 10% decrease in office-managed log entries"
+        ],
+        "2024–2025 Designations": [
+          "Newport, BPMS, Kenneth Murphy and Oak Crest each designated Commendable; Howe designated Targeted for one subgroup of just over 20 students",
+          "Newport increased its overall index score by 13.43, from 52.01 to 65.44",
+          "BPMS earned Commendable for a second consecutive year",
+          "Kenneth Murphy moved into Commendable status, with ELA scores up 13 points",
+          "Oak Crest English Learner proficiency growth on IAR rose from 60.23 to 70.61"
+        ],
+        "Tentative Levy": [
+          "Frank Adams presented the tentative 2025 levy for review",
+          "Extension limited by PTELL to the lesser of 5.0% or CPI, plus new property; the applicable 2025 CPI is 2.9%",
+          "Administration proposed a levy request 3.37% over the prior year's extension, intentionally overestimated to capture revenue from new construction",
+          "Cost pressures cited: pending union contract renegotiations, health insurance increases of 15% to 35%, purchased services, building maintenance, and special education"
+        ],
+        "Action Items": [
+          "Donation in excess of $500 approved",
+          "School Improvement Plans approved",
+          "Joint Board Safety Notification Protocol / Tiered Case Management approved",
+          "Board approved supporting the IASB resolution on school bus safety funding and all ten proposed constitutional amendments"
+        ],
+        "Also Noted": [
+          "Positive Descriptive Praise, Staff Spotlight and the first District Champion Award recipients honored in person",
+          "November recognized as School Board Member Appreciation Month",
+          "Thanksgiving break November 26–29"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of November 17, 2025."
+    },
+    {
+      "date": "2025-12-15",
+      "label": "December 15, 2025",
+      "month": "December 2025",
+      "short": "Dec 15",
+      "mon": "Dec",
+      "type": "Regular",
+      "special": "Levy Hearing",
+      "time": "6:30–7:50 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/6cced032-9b22-4a87-b9bd-9f5997ab6b49/12.15.2025-Regular-Board-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/333aa29e-aa30-4e20-ad03-d30affaf79c3/12.15.2025-Regular-Meeting-Minutes.pdf",
+      "cats": ["finance", "personnel", "policy", "curriculum"],
+      "items": [
+        "Truth in Taxation levy hearing held; the 2025 Tax Levy was then adopted",
+        "Twenty-one PRESS policies approved on second reading",
+        "One additional 1.0 FTE Special Education Resource Teacher approved for Howe Elementary",
+        "Closed session minutes reviewed for release, continued confidentiality, and recording destruction",
+        "Winter i-Ready testing underway, with a data presentation planned for February or March"
+      ],
+      "detail": {
+        "Levy Hearing (6:30–6:43 PM)": [
+          "Frank Adams presented the 2025 Final Tax Levy at the statutory Truth in Taxation hearing",
+          "Levy assumptions: an estimated 3.19% increase over the 2024 extension, roughly 10% growth in Equalized Assessed Valuation, and about $3.1 million in new construction",
+          "Cost drivers cited: inflation in purchased services and supplies, continuation of after-school and summer programs, collective bargaining negotiations, and rising health insurance costs",
+          "No public comments were received during the hearing"
+        ],
+        "Action Items": [
+          "2025 Tax Levy adopted",
+          "One (1.0) FTE Special Education Resource Teacher approved for Howe Elementary",
+          "Twenty-one PRESS policies approved, covering targeted school violence, student discipline, curriculum content, access to electronic networks, bullying, suspension and expulsion procedures, student records, and visitors to school property",
+          "Closed session minutes reviewed: some kept confidential, others released for public inspection, and eligible audio recordings approved for destruction"
+        ],
+        "Policy Pipeline": [
+          "Second reading completed on the twenty-one policies adopted this evening",
+          "Twenty further policies reviewed for approval at the January meeting, covering ethics and gift ban, board officer duties, fiscal and business management, purchases and contracts, food services, facility management, residence, attendance and truancy, and student behavior"
+        ],
+        "Also Noted": [
+          "Winter i-Ready testing began, with results to be presented at the February or March board meeting",
+          "Winter break December 22 through January 2; staff return January 5 and students January 6",
+          "SEDOL approved hiring Dr. Thomas as Superintendent and a restructured tuition model",
+          "Five FOIA requests received; closed session held 7:21–7:46 PM"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of December 15, 2025."
+    },
+    {
+      "date": "2026-01-12",
+      "label": "January 12, 2026",
+      "month": "January 2026",
+      "short": "Jan 12",
+      "mon": "Jan",
+      "type": "Regular",
+      "special": null,
+      "time": "6:34–7:07 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/f926cbf3-0fc1-4516-baaf-0c802820f668/1.12.2026-Regular-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/2e0e2410-bddc-410d-a135-5e54066d1a5a/1.12.2026-Regular-Meeting-Minutes.pdf",
+      "cats": ["policy", "facilities", "community"],
+      "items": [
+        "Twenty PRESS policies approved on second reading",
+        "Summer project list reviewed: Newport concrete repairs, Kenneth Murphy tuckpointing, and BPMS Phase 3 carpet replacement",
+        "Eleven further policies introduced for February approval",
+        "Community events announced: Superintendent coffee, State of Education, and the Foundation kickoff",
+        "No closed session was needed; the meeting ran just over thirty minutes"
+      ],
+      "detail": {
+        "Action Items": [
+          "Twenty PRESS policies approved, covering ethics and gift ban, board officer qualifications and duties, board member development, board communications, fiscal and business management, revenue and investments, incurring debt, purchases and contracts, accounting and audits, food services, facility management, environmental quality, expenses, admissions and transfers, residence, attendance and truancy, teen dating violence, student behavior, administering medicines, and elementary publications"
+        ],
+        "Committee Reports": [
+          "Long-Range Planning reviewed the summer project list: Newport concrete repairs, Kenneth Murphy tuckpointing, and Middle School Phase 3 carpet replacement",
+          "Finance reviewed and approved the bills"
+        ],
+        "Policy Pipeline": [
+          "Eleven policies reviewed for February approval, covering legal status, district organization, philosophy, governance, board member oath and conduct, board-superintendent relationship, policy development, payment procedures, procurement cards, pandemic preparedness, and connection with the community"
+        ],
+        "Also Noted": [
+          "District closed January 19 for Martin Luther King Jr.'s birthday",
+          "Superintendent coffee January 20; State of Education at the BPMS cafe January 22; Foundation kickoff January 29",
+          "Three FOIA requests received",
+          "A closed session was on the agenda but was not convened, as no items required discussion"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of January 12, 2026."
+    },
+    {
+      "date": "2026-02-09",
+      "label": "February 9, 2026",
+      "month": "February 2026",
+      "short": "Feb 9",
+      "mon": "Feb",
+      "type": "Regular",
+      "special": null,
+      "time": "6:31–8:00 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/b4e6c478-4aea-4166-9348-2d2c39f4b629/2.9.2026-Regular-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/95a759d8-02da-4fe1-9432-3371e2a4e090/2.9.2026-Regular-Meeting-Minutes.pdf",
+      "cats": ["facilities", "policy", "personnel", "community"],
+      "items": [
+        "District received the Devoted to Wellness Silver Award through the EBC Wellbeing Incentive Program",
+        "Exterior wall remediation contract for Kenneth Murphy Elementary awarded to Otto Baum Company, Inc.",
+        "Eleven PRESS policies approved on second reading",
+        "Multicultural Festival announced for April 11 at BPMS, in person with a live-stream option",
+        "2026–2027 registration to open the week of March 16"
+      ],
+      "detail": {
+        "Recognition": [
+          "Devoted to Wellness Silver Award presented by Allison Evors, Benefits Consultant with Gallagher Benefit Services",
+          "District Benefits Coordinator Veronica Tano accepted the award and presented certificates of appreciation to the Wellness Committee"
+        ],
+        "Action Items": [
+          "Eleven PRESS policies approved, covering legal status, district organization, philosophy, governance, board member oath and conduct, board-superintendent relationship, policy development, payment procedures, procurement cards, pandemic preparedness, and connection with the community",
+          "Bid awarded to Otto Baum Company, Inc. for Kenneth Murphy Elementary School Exterior Wall Remediation (Phase 2)"
+        ],
+        "Superintendent's Report": [
+          "The proposed 2026–2027 school calendar was developed with union leadership, with approval to be sought in March",
+          "2026–2027 registration opens the week of March 16; proof of residency required",
+          "Multicultural Festival \"Together We Celebrate District 3\" set for April 11, 9:00 a.m. to 2:00 p.m. at BPMS, held in person after community survey feedback"
+        ],
+        "Also Noted": [
+          "Closed session held first, 6:34–7:27 PM, on employment matters and closed session minutes",
+          "Long-Range Planning reviewed qualified bidders for the Kenneth Murphy tuckpointing work",
+          "Nine further policies introduced for a later approval",
+          "Six FOIA requests received"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of February 9, 2026."
+    },
+    {
+      "date": "2026-03-16",
+      "label": "March 16, 2026",
+      "month": "March 2026",
+      "short": "Mar 16",
+      "mon": "Mar",
+      "type": "Regular",
+      "special": null,
+      "time": "6:37–8:27 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/bc416257-a121-416b-ba87-2c9ec71bcf00/3.16.2026-Regular-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/5502a867-6692-4af3-9a73-c1d5b5cf8a4a/3.16.2026-Regular-Meeting-Minutes.pdf",
+      "cats": ["policy", "facilities", "personnel", "curriculum", "community"],
+      "items": [
+        "District 3 Discipline Improvement Plan approved",
+        "Newport concrete improvement contract awarded to Chadwick Contracting Company",
+        "Memorandum of Understanding to hire a social worker approved",
+        "Nine PRESS policies approved on second reading",
+        "2026–2027 calendar revisions presented; registration opened March 16"
+      ],
+      "detail": {
+        "Action Items": [
+          "Nine PRESS policies approved, covering chain of command, nonpublic school students, release during school hours, student rights and responsibilities, search and seizure, extracurricular athletics, student fundraising, gifts to the district, and public suggestions and concerns",
+          "District 3 Discipline Improvement Plan approved",
+          "Contract awarded to Chadwick Contracting Company for concrete improvement at Newport",
+          "Memorandum of Understanding to hire a social worker approved"
+        ],
+        "Superintendent's Report": [
+          "2026–2027 calendar revisions: Election Day added as a non-attendance day, the November School Improvement Day moved to November 10, and Veterans Day designated a student attendance day with planned activities",
+          "Calendar to be brought back for approval at the April meeting",
+          "2026–2027 registration opened March 16, with SnapCodes emailed to parents",
+          "Multicultural Festival confirmed for April 11, 9:00 a.m. to 2:00 p.m. at BPMS",
+          "Spring break March 23–27, with the district office remaining open",
+          "The SIP data presentation was postponed to a later meeting"
+        ],
+        "Committee Reports": [
+          "Long-Range Planning recommended approval of the Newport concrete repairs supporting the gas meter",
+          "Finance reviewed school fees and fee collection strategies, the social workers MOU, and the Newport concrete work"
+        ],
+        "Also Noted": [
+          "Three FOIA requests received",
+          "Closed session held 7:02–8:22 PM on employment matters and closed session minutes"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of March 16, 2026."
+    },
+    {
+      "date": "2026-04-13",
+      "label": "April 13, 2026",
+      "month": "April 2026",
+      "short": "Apr 13",
+      "mon": "Apr",
+      "type": "Regular",
+      "special": null,
+      "time": "6:30–7:46 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/0567374b-2d6e-419c-9b01-9c0eaaff3a57/4.13.2026-Regular-Board-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/b244c1f4-70e7-4f22-ab6f-80e8cd16c379/4.13.2026-Regular-Meeting-Minutes.pdf",
+      "cats": ["personnel", "policy", "facilities", "community"],
+      "items": [
+        "2026–2027 School Calendar approved",
+        "2026–2027 Board Meeting Dates approved — the schedule this dashboard now tracks",
+        "Registration for IESA participation approved",
+        "Administrator contract approved for Raymond Porten",
+        "Summer facilities contracts reported in progress and scheduled to begin over the summer"
+      ],
+      "detail": {
+        "Action Items": [
+          "2026–2027 School Calendar approved after board feedback",
+          "2026–2027 Board Meeting Dates approved",
+          "Registration for IESA participation approved",
+          "Administrator contract for Raymond Porten approved"
+        ],
+        "Also Noted": [
+          "Dr. Wilcox was absent; Director of Human Resources Mr. Cappozzo presented the Superintendent's Report",
+          "Long-Range Planning reported contracts discussed at the prior meeting are in progress and scheduled to begin over the summer",
+          "Five FOIA requests received",
+          "Closed session held 6:55–7:41 PM on employment matters"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of April 13, 2026."
+    },
+    {
+      "date": "2026-05-11",
+      "label": "May 11, 2026",
+      "month": "May 2026",
+      "short": "May 11",
+      "mon": "May",
+      "type": "Regular",
+      "special": null,
+      "time": "6:33–9:10 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/da472170-d291-4e41-b83e-10670841f741/5.11.2026-Regular-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/fb9dbc57-c2dc-402e-8bf8-ecacbb79d0a7/5.11.2026-Regular-Board-Meeting-Minutes.pdf",
+      "cats": ["finance", "curriculum", "facilities", "policy", "community"],
+      "items": [
+        "Fall-to-winter i-Ready data presented: districtwide gains in ELA and math grade-level proficiency",
+        "Tentative Amended FY26 Budget presented and placed on public display",
+        "2026–2027 student fees and the 2025–2026 final calendar approved",
+        "ISBE Consolidated District Plan Application for 2026–2027 approved",
+        "Resolution approved to certify a County School Facility Occupation Tax proposition"
+      ],
+      "detail": {
+        "i-Ready / SIP Data": [
+          "Director of Teaching and Learning Traci Griffiths presented fall-to-winter i-Ready assessment data",
+          "Against a district goal of 53% of students meeting projected growth targets in ELA and math, overall growth was near or at target across most schools and grade levels",
+          "Districtwide, students at or above grade level increased in both ELA and math, while students one or more grade levels below expectations decreased",
+          "First-year curriculum implementation challenges were discussed, supported by professional development and instructional coaching",
+          "Celebrations included growth in mathematics and progress among kindergarten students; next steps include reviewing spring i-Ready data and updating curriculum frameworks"
+        ],
+        "Budget Amendment": [
+          "Frank Adams presented the Tentative Amended FY26 Budget",
+          "The amendment was required to comply with Section 17-1.5 of the Illinois School Code, which limits administrative expenditure growth to 5% over the prior year; the original budget reflected a 6% increase",
+          "The original budget projected a $61,100 deficit; the amended budget reflects a $59,601 deficit, an improvement of about $1,500",
+          "Next steps: 30 days on public display, published hearing notice, a June budget hearing, and submission to ISBE and the Lake County Clerk"
+        ],
+        "Action Items": [
+          "Resolution to certify a proposition for a County School Facility Occupation Tax approved",
+          "ISBE Consolidated District Plan Application for 2026–2027 approved",
+          "FY26 Tentative Amended Budget placed on public display with required newspaper notice",
+          "2026–2027 student fees approved",
+          "2025–2026 final calendar approved",
+          "The board acted on a student disciplinary review considered in closed session"
+        ],
+        "Also Noted": [
+          "8th grade graduation set for May 26 at the Genesee Theatre; summer hours begin June 1 with the district office closed Fridays",
+          "Long-Range Planning: the district continues to seek a contractor for the Kenosha Road property demolition, and the Oak Crest street sign remains pending",
+          "Two FOIA requests received",
+          "Closed session held 7:10–8:55 PM on employment and student disciplinary matters"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of May 11, 2026."
+    },
+    {
+      "date": "2026-06-15",
+      "label": "June 15, 2026",
+      "month": "June 2026",
+      "short": "Jun 15",
+      "mon": "Jun",
+      "type": "Regular",
+      "special": "Budget Hearing",
+      "time": "6:29–7:03 PM",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/c2d97d14-f532-4d14-8cfc-7a62b8a82870/6.15.2026-Regular-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/fa9a01e2-6c7a-4dc2-b44f-9f22a839c5cb/6.15.2026-Regular-Meeting-Minutes.pdf",
+      "cats": ["finance", "personnel", "facilities", "community"],
+      "items": [
+        "Public hearing held on the Amended FY26 Budget, which was then adopted",
+        "Intergovernmental agreement approved with the Lake County ROE for the Alternative Learning Opportunities Program",
+        "Board acknowledged the resignation of member Kory Geisser, effective June 30, 2026",
+        "Food service contract extension, hazardous routes resolution and treasurer's surety bond approved",
+        "Registration for 2026–2027 reported at over 60% of students as of June 9"
+      ],
+      "detail": {
+        "Budget Hearing (6:29–6:32 PM)": [
+          "Frank Adams presented the Amended FY26 Budget, required to comply with the administrative cost limitation under Section 17-1.5 of the Illinois School Code",
+          "The original FY26 budget projected a $61,100 deficit; the amended budget reflects a $59,601 deficit, an improvement of $1,498",
+          "The final amended budget to be submitted to ISBE and filed with the Lake County Clerk",
+          "No questions or comments were received from visitors"
+        ],
+        "Action Items": [
+          "Amended FY26 Budget approved",
+          "2026–2027 Hazardous Routes Resolution approved",
+          "Food service contract extension approved",
+          "Resolution authorizing the prompt payment of bills approved",
+          "Treasurer's surety bond approved",
+          "2026–2027 Assistant Principal contract for Oak Crest School approved",
+          "Intergovernmental agreement with the Lake County Regional Office of Education for the Alternative Learning Opportunities Program approved"
+        ],
+        "Superintendent's Report": [
+          "District Champion Award recipients for April recognized",
+          "Back to School Bash planned for August 3, 2026, 4:00–6:30 p.m. at Zion-Benton Township High School",
+          "Board retreat scheduled for June 22; no regular board meeting in July",
+          "Over 60% of students registered for 2026–2027 as of June 9",
+          "ALOP would support students with attendance, behavioral, social-emotional or mental health concerns at no cost to the district"
+        ],
+        "Board Membership": [
+          "The board acknowledged the resignation of board member Mr. Kory Geisser, effective June 30, 2026"
+        ],
+        "Also Noted": [
+          "Five FOIA requests received",
+          "Closed session held 6:44–6:58 PM on employment matters"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of June 15, 2026."
+    },
+    {
+      "date": "2026-06-22",
+      "label": "June 22, 2026",
+      "month": "June 2026",
+      "short": "Jun 22",
+      "mon": "Jun",
+      "type": "Special",
+      "special": "Special Meeting",
+      "time": "8:33 AM and 1:30 PM sessions",
+      "agenda": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/3fa81322-8f1d-4b68-a74d-b1e0d0e1068c/6.22.2026-Special-Board-Meeting-Agenda.pdf",
+      "minutes": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2856/Bpd3/b70813ed-0b63-4548-91f9-a7fa6b002fe5/6.22.2026-Special-Board-Morning-Session-Minutes.pdf",
+      "cats": ["personnel", "policy"],
+      "items": [
+        "Two special sessions held: a morning board retreat and an afternoon meeting to fill the board vacancy",
+        "Erika Snediker appointed to fill the vacant board position",
+        "Morning retreat held in closed session at The Shanty in Wadsworth, 8:35–11:42 a.m.",
+        "Afternoon session interviewed candidates for the board vacancy at the district office"
+      ],
+      "detail": {
+        "Morning Session — Board Retreat": [
+          "Special meeting convened at The Shanty in Wadsworth at 8:33 a.m.",
+          "Board adjourned to closed session for the retreat, 8:35–11:42 a.m., and adjourned immediately on returning to open session"
+        ],
+        "Afternoon Session — Board Vacancy": [
+          "Special meeting convened at the district office at 1:30 p.m.",
+          "Board adjourned to closed session to interview candidates to fill the Board of Education vacancy",
+          "On returning to open session, the board approved the appointment of Erika Snediker to fill the vacant position"
+        ],
+        "Follow-on": [
+          "The oath of office was administered to Mrs. Snediker at the August 10, 2026 regular meeting"
+        ]
+      },
+      "sourceNote": "Summarized from the approved minutes of the June 22, 2026 special meetings. The afternoon session minutes are posted separately in the district archive."
+    }
+  ]
+}</script>
 
-<!-- CARD 0: AUGUST 2025 -->
-<div class="mc" id="c0" data-cats="finance personnel policy community">
-  <div class="mch">
-    <div class="mm">&#128197; August 2025</div>
-    <div class="md2">August 11, 2025 &nbsp;|&nbsp; 6:30 PM &nbsp;|&nbsp; BPMS Cafeteria</div>
-    <div class="badges">
-      <span class="badge b-comp">&#10003; Minutes Available</span>
-      <span class="badge b-spec">&#11088; Organizational Meeting</span>
-    </div>
-  </div>
-  <div class="mcb">
-    <div class="pills">
-      <span class="pl pf">Finance</span><span class="pl pp">Personnel</span>
-      <span class="pl po">Policy</span><span class="pl pco">Community</span>
-    </div>
-    <ul class="acts">
-      <li class="highlight">Elected Board officers &amp; appointed district officials for 2025&ndash;26</li>
-      <li>Approved FY2026 budget parameters and insurance renewals</li>
-      <li>Approved new hire certifications and extracurricular assignments</li>
-      <li>First reading of updated Board Policy Manual</li>
-      <li>Summer maintenance project completion report reviewed</li>
-    </ul>
-    <div class="mbars">
-      <div class="mbar"><span class="mbl">Finance</span><div class="mbt"><div class="mbf" style="width:70%;background:#2e7d32;"></div></div></div>
-      <div class="mbar"><span class="mbl">Personnel</span><div class="mbt"><div class="mbf" style="width:80%;background:#e65100;"></div></div></div>
-      <div class="mbar"><span class="mbl">Policy</span><div class="mbt"><div class="mbf" style="width:60%;background:#00695c;"></div></div></div>
-      <div class="mbar"><span class="mbl">Community</span><div class="mbt"><div class="mbf" style="width:40%;background:#f5a623;"></div></div></div>
-    </div>
-  </div>
-  <div class="mcf">
-    <button class="bs bt2" onclick="toggleDetail('d0')">&#128269; View Details</button>
-    <a class="bs bo2" href="https://www.bpd3.org/o/bpd3/page/regular-board-meeting" target="_blank">&#128196; Agenda &amp; Minutes</a>
-    <button class="bs bgr2" onclick="openModal(0)">&#9998; Add Notes</button>
-  </div>
-  <div class="md" id="d0">
-    <h4>&#128100; Personnel Actions</h4>
-    <ul><li>Board officer elections: President, Vice President, Secretary</li><li>Appointed district treasurer, attorney, and Freedom of Information Officer</li><li>New certified staff hires approved</li><li>Extracurricular and coaching assignments approved</li></ul>
-    <h4>&#128181; Finance Actions</h4>
-    <ul><li>FY2026 budget parameters established</li><li>District insurance renewals approved</li><li>Authorized bank accounts and signatories</li></ul>
-    <h4>&#128203; Policy</h4>
-    <ul><li>First reading — Board Policy Manual updates (multiple sections)</li><li>Superintendent goals and evaluation framework reviewed</li></ul>
-  </div>
-</div>
-
-<!-- CARD 1: SEPTEMBER 2025 (Budget Hearing) -->
-<div class="mc" id="c1" data-cats="finance curriculum personnel policy community">
-  <div class="mch">
-    <div class="mm">&#128197; September 2025</div>
-    <div class="md2">September 15, 2025 &nbsp;|&nbsp; 6:30 PM &nbsp;|&nbsp; BPMS Cafeteria</div>
-    <div class="badges">
-      <span class="badge b-comp">&#10003; Minutes Available</span>
-      <span class="badge b-spec">&#11088; Budget Hearing</span>
-    </div>
-  </div>
-  <div class="mcb">
-    <div class="pills">
-      <span class="pl psp">&#11088; Budget Hearing</span><span class="pl pf">Finance</span>
-      <span class="pl pc">Curriculum</span><span class="pl pp">Personnel</span>
-      <span class="pl po">Policy</span><span class="pl pco">Community</span>
-    </div>
-    <ul class="acts">
-      <li class="highlight">PUBLIC HEARING: FY2026 Annual Budget formally adopted</li>
-      <li>New K&ndash;5 Reading Curriculum adoption approved</li>
-      <li>All 5 principals presented School Improvement Plans</li>
-      <li>Second reading &amp; adoption of updated Board Policy Manual</li>
-      <li>Certified and classified staff approvals</li>
-    </ul>
-    <div class="mbars">
-      <div class="mbar"><span class="mbl">Finance</span><div class="mbt"><div class="mbf" style="width:90%;background:#2e7d32;"></div></div></div>
-      <div class="mbar"><span class="mbl">Curriculum</span><div class="mbt"><div class="mbf" style="width:70%;background:#1565c0;"></div></div></div>
-      <div class="mbar"><span class="mbl">Personnel</span><div class="mbt"><div class="mbf" style="width:60%;background:#e65100;"></div></div></div>
-      <div class="mbar"><span class="mbl">Policy</span><div class="mbt"><div class="mbf" style="width:70%;background:#00695c;"></div></div></div>
-    </div>
-  </div>
-  <div class="mcf">
-    <button class="bs bt2" onclick="toggleDetail('d1')">&#128269; View Details</button>
-    <a class="bs bo2" href="https://www.bpd3.org/o/bpd3/page/regular-board-meeting" target="_blank">&#128196; Agenda &amp; Minutes</a>
-    <button class="bs bgr2" onclick="openModal(1)">&#9998; Add Notes</button>
-  </div>
-  <div class="md" id="d1">
-    <h4>&#128181; Budget Hearing Details</h4>
-    <ul><li>Public hearing opened and closed per legal requirements</li><li>FY2026 budget presented by Director of Finance</li><li>Budget adopted by roll call vote</li></ul>
-    <h4>&#128218; Curriculum</h4>
-    <ul><li>New K-5 Reading Curriculum: vendor approved, implementation plan presented</li><li>School Improvement Plans: Howe, Kenneth Murphy, Newport, Oak Crest, BPMS all presented</li></ul>
-    <h4>&#128203; Policy Adoption</h4>
-    <ul><li>Board Policy Manual updates adopted on second reading</li><li>Annual notifications to parents (FERPA, PPRA, Title IX) approved</li></ul>
-  </div>
-</div>
-
-<!-- CARD 2: OCTOBER 2025 -->
-<div class="mc" id="c2" data-cats="finance curriculum facilities policy">
-  <div class="mch">
-    <div class="mm">&#128197; October 2025</div>
-    <div class="md2">October 20, 2025 &nbsp;|&nbsp; 6:30 PM &nbsp;|&nbsp; BPMS Cafeteria</div>
-    <div class="badges"><span class="badge b-comp">&#10003; Minutes Available</span></div>
-  </div>
-  <div class="mcb">
-    <div class="pills">
-      <span class="pl pf">Finance</span><span class="pl pc">Curriculum</span>
-      <span class="pl pfa">Facilities</span><span class="pl po">Policy</span>
-    </div>
-    <ul class="acts">
-      <li>October bills payable and monthly financial reports approved</li>
-      <li>IAR/PARCC assessment data reviewed &mdash; district performance discussion</li>
-      <li class="highlight">Technology Director presented Chromebook fleet maintenance report</li>
-      <li>Student handbook revisions reviewed by Board</li>
-      <li>October safety and emergency drill compliance confirmed</li>
-    </ul>
-    <div class="mbars">
-      <div class="mbar"><span class="mbl">Finance</span><div class="mbt"><div class="mbf" style="width:65%;background:#2e7d32;"></div></div></div>
-      <div class="mbar"><span class="mbl">Curriculum</span><div class="mbt"><div class="mbf" style="width:75%;background:#1565c0;"></div></div></div>
-      <div class="mbar"><span class="mbl">Facilities</span><div class="mbt"><div class="mbf" style="width:55%;background:#6a1b9a;"></div></div></div>
-      <div class="mbar"><span class="mbl">Policy</span><div class="mbt"><div class="mbf" style="width:50%;background:#00695c;"></div></div></div>
-    </div>
-  </div>
-  <div class="mcf">
-    <button class="bs bt2" onclick="toggleDetail('d2')">&#128269; View Details</button>
-    <a class="bs bo2" href="https://www.bpd3.org/o/bpd3/page/regular-board-meeting" target="_blank">&#128196; Agenda &amp; Minutes</a>
-    <button class="bs bgr2" onclick="openModal(2)">&#9998; Add Notes</button>
-  </div>
-  <div class="md" id="d2">
-    <h4>&#128202; Assessment Data</h4>
-    <ul><li>IAR ELA and Math results presented by building</li><li>District trend analysis reviewed; action steps discussed</li></ul>
-    <h4>&#128187; Technology (Micah Miner)</h4>
-    <ul><li>Chromebook fleet maintenance and refresh schedule presented</li><li>E-Rate application status update</li><li>Cybersecurity posture baseline discussed</li></ul>
-  </div>
-</div>
-
-<!-- CARD 3: NOVEMBER 2025 -->
-<div class="mc" id="c3" data-cats="finance curriculum personnel community">
-  <div class="mch">
-    <div class="mm">&#128197; November 2025</div>
-    <div class="md2">November 17, 2025 &nbsp;|&nbsp; 6:30 PM &nbsp;|&nbsp; BPMS Cafeteria</div>
-    <div class="badges"><span class="badge b-comp">&#10003; Minutes Available</span></div>
-  </div>
-  <div class="mcb">
-    <div class="pills">
-      <span class="pl pf">Finance</span><span class="pl pc">Curriculum</span>
-      <span class="pl pp">Personnel</span><span class="pl pco">Community</span>
-    </div>
-    <ul class="acts">
-      <li>November financials &amp; tax levy public notice discussion</li>
-      <li>Q1 progress monitoring data presented &mdash; MTSS tiered support review</li>
-      <li>Leave of absence approvals and new hire certifications</li>
-      <li class="highlight">PBIS student recognition presented at Board meeting</li>
-      <li>Community partnership Thanksgiving update</li>
-    </ul>
-    <div class="mbars">
-      <div class="mbar"><span class="mbl">Finance</span><div class="mbt"><div class="mbf" style="width:75%;background:#2e7d32;"></div></div></div>
-      <div class="mbar"><span class="mbl">Curriculum</span><div class="mbt"><div class="mbf" style="width:70%;background:#1565c0;"></div></div></div>
-      <div class="mbar"><span class="mbl">Personnel</span><div class="mbt"><div class="mbf" style="width:65%;background:#e65100;"></div></div></div>
-      <div class="mbar"><span class="mbl">Community</span><div class="mbt"><div class="mbf" style="width:60%;background:#f5a623;"></div></div></div>
-    </div>
-  </div>
-  <div class="mcf">
-    <button class="bs bt2" onclick="toggleDetail('d3')">&#128269; View Details</button>
-    <a class="bs bo2" href="https://www.bpd3.org/o/bpd3/page/regular-board-meeting" target="_blank">&#128196; Agenda &amp; Minutes</a>
-    <button class="bs bgr2" onclick="openModal(3)">&#9998; Add Notes</button>
-  </div>
-  <div class="md" id="d3">
-    <h4>&#128181; Finance</h4>
-    <ul><li>Monthly financials approved; bills payable ratified</li><li>Tax levy public notice timeline reviewed with legal counsel</li></ul>
-    <h4>&#128218; MTSS Data</h4>
-    <ul><li>Tier 1, 2, 3 student support data reviewed by building</li><li>READ Act compliance progress across elementary schools</li></ul>
-  </div>
-</div>
-
-<!-- CARD 4: DECEMBER 2025 (Levy Hearing) -->
-<div class="mc" id="c4" data-cats="finance personnel curriculum community">
-  <div class="mch">
-    <div class="mm">&#128197; December 2025</div>
-    <div class="md2">December 15, 2025 &nbsp;|&nbsp; 6:30 PM &nbsp;|&nbsp; BPMS Cafeteria</div>
-    <div class="badges">
-      <span class="badge b-comp">&#10003; Minutes Available</span>
-      <span class="badge b-spec">&#11088; Tax Levy Hearing</span>
-    </div>
-  </div>
-  <div class="mcb">
-    <div class="pills">
-      <span class="pl psp">&#11088; Levy Hearing</span><span class="pl pf">Finance</span>
-      <span class="pl pp">Personnel</span><span class="pl pc">Curriculum</span>
-      <span class="pl pco">Community</span>
-    </div>
-    <ul class="acts">
-      <li class="highlight">PUBLIC HEARING: Annual Tax Levy certified and filed with Lake County</li>
-      <li>Mid-year staffing adjustments approved</li>
-      <li>Semester exam schedule approved</li>
-      <li>Holiday community event approvals</li>
-      <li>Winter break communication plan reviewed and approved</li>
-    </ul>
-    <div class="mbars">
-      <div class="mbar"><span class="mbl">Finance</span><div class="mbt"><div class="mbf" style="width:95%;background:#2e7d32;"></div></div></div>
-      <div class="mbar"><span class="mbl">Personnel</span><div class="mbt"><div class="mbf" style="width:65%;background:#e65100;"></div></div></div>
-      <div class="mbar"><span class="mbl">Curriculum</span><div class="mbt"><div class="mbf" style="width:50%;background:#1565c0;"></div></div></div>
-    </div>
-  </div>
-  <div class="mcf">
-    <button class="bs bt2" onclick="toggleDetail('d4')">&#128269; View Details</button>
-    <a class="bs bo2" href="https://www.bpd3.org/o/bpd3/page/regular-board-meeting" target="_blank">&#128196; Agenda &amp; Minutes</a>
-    <button class="bs bgr2" onclick="openModal(4)">&#9998; Add Notes</button>
-  </div>
-  <div class="md" id="d4">
-    <h4>&#128181; Levy Hearing</h4>
-    <ul><li>Public hearing opened and closed per statute</li><li>Annual Tax Levy adopted by roll call vote</li><li>Levy filed with Lake County Clerk</li></ul>
-    <h4>&#128100; Personnel</h4>
-    <ul><li>Mid-year retirements and resignations accepted with appreciation</li><li>Replacement hiring authorizations approved</li></ul>
-  </div>
-</div>
-
-<!-- CARD 5: JANUARY 2026 -->
-<div class="mc" id="c5" data-cats="finance curriculum personnel facilities policy">
-  <div class="mch">
-    <div class="mm">&#128197; January 2026</div>
-    <div class="md2">January 12, 2026 &nbsp;|&nbsp; 6:30 PM &nbsp;|&nbsp; BPMS Cafeteria</div>
-    <div class="badges"><span class="badge b-comp">&#10003; Minutes Available</span></div>
-  </div>
-  <div class="mcb">
-    <div class="pills">
-      <span class="pl pf">Finance</span><span class="pl pc">Curriculum</span>
-      <span class="pl pp">Personnel</span><span class="pl pfa">Facilities</span>
-      <span class="pl po">Policy</span>
-    </div>
-    <ul class="acts">
-      <li>Mid-year financial review &mdash; Q2 budget status on track</li>
-      <li>New semester course offerings and MTSS data approved</li>
-      <li>Capital improvement plan discussion initiated</li>
-      <li>Board Policy Manual annual review initiated</li>
-      <li>New hire and coaching assignment approvals</li>
-    </ul>
-    <div class="mbars">
-      <div class="mbar"><span class="mbl">Finance</span><div class="mbt"><div class="mbf" style="width:70%;background:#2e7d32;"></div></div></div>
-      <div class="mbar"><span class="mbl">Curriculum</span><div class="mbt"><div class="mbf" style="width:65%;background:#1565c0;"></div></div></div>
-      <div class="mbar"><span class="mbl">Facilities</span><div class="mbt"><div class="mbf" style="width:55%;background:#6a1b9a;"></div></div></div>
-    </div>
-  </div>
-  <div class="mcf">
-    <button class="bs bt2" onclick="toggleDetail('d5')">&#128269; View Details</button>
-    <a class="bs bo2" href="https://www.bpd3.org/o/bpd3/page/regular-board-meeting" target="_blank">&#128196; Agenda &amp; Minutes</a>
-    <button class="bs bgr2" onclick="openModal(5)">&#9998; Add Notes</button>
-  </div>
-  <div class="md" id="d5">
-    <h4>&#128181; Mid-Year Finance</h4>
-    <ul><li>Q2 revenue/expenditure report presented</li><li>Fund balances reviewed; budget amendments if needed</li></ul>
-    <h4>&#127963; Capital Improvement</h4>
-    <ul><li>Preliminary capital needs by building presented</li><li>Priorities for summer 2026 projects discussed</li></ul>
-  </div>
-</div>
-
-<!-- CARD 6: FEBRUARY 2026 -->
-<div class="mc" id="c6" data-cats="finance curriculum personnel facilities policy community">
-  <div class="mch">
-    <div class="mm">&#128197; February 2026</div>
-    <div class="md2">February 9, 2026 &nbsp;|&nbsp; 6:30 PM &nbsp;|&nbsp; BPMS Cafeteria</div>
-    <div class="badges">
-      <span class="badge b-pend">&#9203; Minutes Pending Approval</span>
-    </div>
-  </div>
-  <div class="mcb">
-    <div class="pills">
-      <span class="pl pf">Finance</span><span class="pl pc">Curriculum</span>
-      <span class="pl pp">Personnel</span><span class="pl pfa">Facilities</span>
-      <span class="pl po">Policy</span><span class="pl pco">Community</span>
-    </div>
-    <ul class="acts">
-      <li>Monthly financials and bills payable approved</li>
-      <li>ISBE Report Card district performance discussion</li>
-      <li class="highlight">Technology update: Chromebook fleet refresh plan &mdash; Micah Miner, Director of Technology</li>
-      <li>Student data privacy policy updates reviewed (SOPPA compliance)</li>
-      <li>Black History Month recognition &mdash; parent engagement report presented</li>
-    </ul>
-    <div class="mbars">
-      <div class="mbar"><span class="mbl">Finance</span><div class="mbt"><div class="mbf" style="width:60%;background:#2e7d32;"></div></div></div>
-      <div class="mbar"><span class="mbl">Curriculum</span><div class="mbt"><div class="mbf" style="width:65%;background:#1565c0;"></div></div></div>
-      <div class="mbar"><span class="mbl">Policy</span><div class="mbt"><div class="mbf" style="width:60%;background:#00695c;"></div></div></div>
-      <div class="mbar"><span class="mbl">Community</span><div class="mbt"><div class="mbf" style="width:55%;background:#f5a623;"></div></div></div>
-    </div>
-  </div>
-  <div class="mcf">
-    <button class="bs bt2" onclick="toggleDetail('d6')">&#128269; View Details</button>
-    <a class="bs bo2" href="https://www.bpd3.org/o/bpd3/page/regular-board-meeting" target="_blank">&#128196; Agenda &amp; Minutes</a>
-    <button class="bs bgr2" onclick="openModal(6)">&#9998; Add Notes</button>
-  </div>
-  <div class="md" id="d6">
-    <h4>&#128187; Technology Report</h4>
-    <ul><li>Chromebook fleet refresh plan: timeline, cost, grade-level deployment</li><li>Network infrastructure upgrade progress</li><li>Cybersecurity Secure Score improvement metrics</li></ul>
-    <h4>&#128203; SOPPA Policy Update</h4>
-    <ul><li>Student data privacy policy revisions reviewed for SOPPA alignment</li><li>Vendor DPA compliance status reviewed</li><li>Technology Office approved vendor list discussed</li></ul>
-  </div>
-</div>
-
-<!-- CARD 7: MARCH 2026 -->
-<div class="mc" id="c7" data-cats="finance curriculum personnel facilities community">
-  <div class="mch">
-    <div class="mm">&#128197; March 2026</div>
-    <div class="md2">March 16, 2026 &nbsp;|&nbsp; 6:30 PM &nbsp;|&nbsp; BPMS Cafeteria</div>
-    <div class="badges">
-      <span class="badge b-pend">&#9203; Minutes Pending Approval</span>
-    </div>
-  </div>
-  <div class="mcb">
-    <div class="pills">
-      <span class="pl pf">Finance</span><span class="pl pc">Curriculum</span>
-      <span class="pl pp">Personnel</span><span class="pl pfa">Facilities</span>
-      <span class="pl pco">Community</span>
-    </div>
-    <ul class="acts">
-      <li>Q3 financial report and budget amendments approved</li>
-      <li>Spring assessment preparation &mdash; READ Act compliance update</li>
-      <li>Non-renewal notices discussed in executive session</li>
-      <li class="highlight">Multicultural Event April 11 planning approved</li>
-      <li>Cybersecurity posture update by Director of Technology</li>
-    </ul>
-    <div class="mbars">
-      <div class="mbar"><span class="mbl">Finance</span><div class="mbt"><div class="mbf" style="width:68%;background:#2e7d32;"></div></div></div>
-      <div class="mbar"><span class="mbl">Curriculum</span><div class="mbt"><div class="mbf" style="width:72%;background:#1565c0;"></div></div></div>
-      <div class="mbar"><span class="mbl">Personnel</span><div class="mbt"><div class="mbf" style="width:60%;background:#e65100;"></div></div></div>
-    </div>
-  </div>
-  <div class="mcf">
-    <button class="bs bt2" onclick="toggleDetail('d7')">&#128269; View Details</button>
-    <a class="bs bo2" href="https://www.bpd3.org/o/bpd3/page/regular-board-meeting" target="_blank">&#128196; Agenda &amp; Minutes</a>
-    <button class="bs bgr2" onclick="openModal(7)">&#9998; Add Notes</button>
-  </div>
-  <div class="md" id="d7">
-    <h4>&#128218; READ Act</h4>
-    <ul><li>Spring literacy screening schedule presented</li><li>READ Act compliance reporting timeline reviewed</li></ul>
-    <h4>&#127775; Community Event</h4>
-    <ul><li>Multicultural Celebration logistics approved: April 11, 9 AM&ndash;2 PM at BPMS</li><li>Community outreach plan and budget approved</li></ul>
-  </div>
-</div>
-
-<!-- CARD 8: APRIL 2026 -->
-<div class="mc" id="c8" data-cats="finance curriculum personnel community policy">
-  <div class="mch">
-    <div class="mm">&#128197; April 2026</div>
-    <div class="md2">April 13, 2026 &nbsp;|&nbsp; 6:30 PM &nbsp;|&nbsp; BPMS Cafeteria</div>
-    <div class="badges">
-      <span class="badge b-pend">&#9203; Minutes Pending Public Posting</span>
-    </div>
-  </div>
-  <div class="mcb">
-    <div class="pills">
-      <span class="pl pf">Finance</span><span class="pl pc">Curriculum</span>
-      <span class="pl pp">Personnel</span><span class="pl pco">Community</span>
-      <span class="pl po">Policy</span>
-    </div>
-    <ul class="acts">
-      <li class="highlight">APPROVED: 2026&ndash;2027 School Calendar</li>
-      <li>Teacher contract negotiation status update &mdash; negotiations ongoing</li>
-      <li>Multicultural Event April 11 recap &mdash; celebrated at BPMS</li>
-      <li>Monthly financials and bills payable approved</li>
-      <li>Student conduct policy updates reviewed</li>
-    </ul>
-    <div class="mbars">
-      <div class="mbar"><span class="mbl">Finance</span><div class="mbt"><div class="mbf" style="width:60%;background:#2e7d32;"></div></div></div>
-      <div class="mbar"><span class="mbl">Curriculum</span><div class="mbt"><div class="mbf" style="width:80%;background:#1565c0;"></div></div></div>
-      <div class="mbar"><span class="mbl">Personnel</span><div class="mbt"><div class="mbf" style="width:70%;background:#e65100;"></div></div></div>
-      <div class="mbar"><span class="mbl">Community</span><div class="mbt"><div class="mbf" style="width:75%;background:#f5a623;"></div></div></div>
-    </div>
-  </div>
-  <div class="mcf">
-    <button class="bs bt2" onclick="toggleDetail('d8')">&#128269; View Details</button>
-    <a class="bs bo2" href="https://www.bpd3.org/o/bpd3/page/regular-board-meeting" target="_blank">&#128196; Agenda &amp; Minutes</a>
-    <button class="bs bgr2" onclick="openModal(8)">&#9998; Add Notes</button>
-  </div>
-  <div class="md" id="d8">
-    <h4>&#128197; 2026-27 Calendar Highlights</h4>
-    <ul><li>First day of school 2026-27 approved</li><li>Holiday breaks, professional development days confirmed</li><li>Calendar available at bpd3.org</li></ul>
-    <h4>&#129309; Contract Negotiations</h4>
-    <ul><li>Certified staff union negotiations ongoing &mdash; update provided</li><li>Board authorized continued bargaining</li></ul>
-    <h4>&#127775; Multicultural Recap</h4>
-    <ul><li>April 11 event at BPMS drew strong community attendance</li><li>Cultural performances, food, raffles celebrated district diversity</li></ul>
-  </div>
-</div>
-
-<!-- CARD 9: MAY 2026 (Most Recent) -->
-<div class="mc" id="c9" data-cats="finance curriculum personnel facilities policy community">
-  <div class="mch">
-    <div class="mm">&#128197; May 2026</div>
-    <div class="md2">May 11, 2026 &nbsp;|&nbsp; 6:30 PM &nbsp;|&nbsp; BPMS Cafeteria</div>
-    <div class="badges">
-      <span class="badge b-pend">&#9203; Minutes Pending Approval</span>
-      <span class="badge b-new">&#9733; Most Recent Agenda</span>
-    </div>
-  </div>
-  <div class="mcb">
-    <div class="pills">
-      <span class="pl pf">Finance</span><span class="pl pc">Curriculum</span>
-      <span class="pl pp">Personnel</span><span class="pl pfa">Facilities</span>
-      <span class="pl po">Policy</span><span class="pl pco">Community</span>
-    </div>
-    <ul class="acts">
-      <li class="highlight">May 11 agenda posted: amended FY26 budget, student fees, final calendar, and ISBE consolidated plan</li>
-      <li>Superintendent report included staff recognitions, 8th grade graduation, summer hours, and SIP data</li>
-      <li>Department reports included business, HR, teaching and learning, multilingual programs, buildings and grounds, technology, and community relations</li>
-      <li>Consent agenda included April 13 regular and closed session minutes</li>
-      <li>Closed session listed personnel and student disciplinary review matters</li>
-    </ul>
-    <div class="mbars">
-      <div class="mbar"><span class="mbl">Finance</span><div class="mbt"><div class="mbf" style="width:85%;background:#2e7d32;"></div></div></div>
-      <div class="mbar"><span class="mbl">Curriculum</span><div class="mbt"><div class="mbf" style="width:70%;background:#1565c0;"></div></div></div>
-      <div class="mbar"><span class="mbl">Personnel</span><div class="mbt"><div class="mbf" style="width:65%;background:#e65100;"></div></div></div>
-      <div class="mbar"><span class="mbl">Policy</span><div class="mbt"><div class="mbf" style="width:55%;background:#00695c;"></div></div></div>
-    </div>
-  </div>
-  <div class="mcf">
-    <a class="bs bt2" href="https://drive.google.com/file/d/181vII60h1MHLVVa2btyLY_fz3ABUzVgn/view?usp=drive_link" target="_blank">&#128196; View Agenda</a>
-    <a class="bs bg2" href="https://www.bpd3.org/live-feed" target="_blank">&#128243; Live Feed</a>
-    <button class="bs bgr2" onclick="openModal(9)">&#9998; Add Notes</button>
-  </div>
-  <div class="md" id="d9">
-    <h4>&#128202; Finance and Operations</h4>
-    <ul><li>Tentative amended FY26 budget presentation and form</li><li>Monthly financials, monthly bills, and 2026-2027 student fees</li><li>Resolution to certify a county school facility occupation tax proposition</li></ul>
-    <h4>&#128218; Teaching, Learning, and Calendar</h4>
-    <ul><li>SIP data presentation</li><li>ISBE consolidated district plan application for the 2026-2027 school year</li><li>2025-2026 final calendar action item</li></ul>
-    <h4>&#128101; Reports and Closed Session</h4>
-    <ul><li>Building and department reports from district leadership areas</li><li>Personnel report and closed-session personnel matter</li><li>Student disciplinary review listed for closed session and action consideration</li></ul>
-  </div>
-</div>
-
-<!-- CARD 10: JUNE 2026 (Upcoming - Year End) -->
-<div class="mc" id="c10" data-cats="finance curriculum personnel community">
-  <div class="mch">
-    <div class="mm">&#128197; June 2026 &mdash; Year-End Meeting</div>
-    <div class="md2">June 15, 2026 &nbsp;|&nbsp; 6:30 PM &nbsp;|&nbsp; BPMS Cafeteria</div>
-    <div class="badges">
-      <span class="badge b-upco">&#128197; Upcoming &mdash; Final 2025&ndash;26 Meeting</span>
-    </div>
-  </div>
-  <div class="mcb">
-    <div class="pills">
-      <span class="pl pf">Finance</span><span class="pl pc">Curriculum</span>
-      <span class="pl pp">Personnel</span><span class="pl pco">Community</span>
-    </div>
-    <ul class="acts">
-      <li>Expected: End-of-year financial close and audit preparation</li>
-      <li>Expected: Personnel end-of-year actions (retirements, resignations)</li>
-      <li>Expected: Superintendent annual evaluation</li>
-      <li>Expected: Strategic planning 2026&ndash;27 kick-off</li>
-      <li>Expected: Year-end recognitions and celebrations</li>
-    </ul>
-  </div>
-  <div class="mcf">
-    <a class="bs bt2" href="https://www.bpd3.org/o/bpd3/page/regular-board-meeting" target="_blank">&#128196; View Agenda</a>
-    <a class="bs bg2" href="https://www.bpd3.org/live-feed" target="_blank">&#128243; Live Feed</a>
-    <button class="bs bgr2" onclick="openModal(10)">&#9998; Add Notes</button>
-  </div>
-  <div class="md" id="d10">
-    <h4>&#127881; End of Year</h4>
-    <ul><li>Formal close of 2025-26 school year budget</li><li>Board recognitions for retirees and outgoing staff</li><li>Preview of 2026-27 district goals and priorities</li></ul>
-  </div>
-</div>
-
-</div><!-- end archive grid -->
+<h2 class="yrh arch" id="arch-h"></h2>
+<div class="archnote" id="arch-note"></div>
+<div class="cgrid archive-collapsed" id="archive-grid"></div><!-- end archive grid -->
 
 <!-- MODAL -->
 <div class="mov" id="modal">
@@ -1036,19 +1139,27 @@ document.getElementById('modal').addEventListener('click', function(e){
 </script>
 
 <script>
-/* ===== 2026-27 dashboard renderer =====
-   Meetings render from the #mtg-data JSON block, which the scheduled workflow
-   in .github/workflows/update-schedule.yml refreshes from bpd3.org.
-   Status (held / next / scheduled) is computed in the browser from today's date. */
+/* ===== dashboard renderer =====
+   Both school years render from JSON blocks: #mtg-data (current year, refreshed
+   by .github/workflows/update-schedule.yml) and #mtg-archive (closed years,
+   reconciled against the district's approved minutes).
+   Held / next / scheduled status is computed in the browser from today's date. */
 (function(){
-  var DATA = {};
-  try { DATA = JSON.parse(document.getElementById('mtg-data').textContent); }
-  catch(e){ console.error('Schedule data failed to parse', e); return; }
+  function load(id){
+    var el = document.getElementById(id);
+    if(!el) return null;
+    try { return JSON.parse(el.textContent); }
+    catch(e){ console.error('Data block ' + id + ' failed to parse', e); return null; }
+  }
+  var DATA = load('mtg-data'), ARCH = load('mtg-archive');
+  if(!DATA) return;
 
   var CATLABEL = {finance:'Finance',curriculum:'Curriculum',personnel:'Personnel',
                   facilities:'Facilities',policy:'Policy',community:'Community'};
   var CATPILL  = {finance:'pf',curriculum:'pc',personnel:'pp',
                   facilities:'pfa',policy:'po',community:'pco'};
+  var CATCOLOR = {finance:'#2e7d32',curriculum:'#1565c0',personnel:'#e65100',
+                  facilities:'#6a1b9a',policy:'#00695c',community:'#f5a623'};
 
   function esc(s){ return String(s==null?'':s)
     .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
@@ -1057,71 +1168,28 @@ document.getElementById('modal').addEventListener('click', function(e){
   var today = new Date(); today.setHours(0,0,0,0);
   function asDate(iso){ var p = iso.split('-'); return new Date(+p[0], +p[1]-1, +p[2]); }
 
-  var ms = (DATA.meetings || []).slice().sort(function(a,b){ return a.date < b.date ? -1 : 1; });
-  var nextIdx = -1;
-  ms.forEach(function(m,i){
-    m._d = asDate(m.date);
-    m._past = m._d < today;
-    if(!m._past && nextIdx === -1) nextIdx = i;
-  });
-  if(nextIdx > -1) ms[nextIdx]._next = true;
+  function prep(data, allPast){
+    var ms = (data.meetings || []).slice().sort(function(a,b){ return a.date < b.date ? -1 : 1; });
+    var nextIdx = -1;
+    ms.forEach(function(m,i){
+      m._past = allPast || asDate(m.date) < today;
+      if(!m._past && nextIdx === -1) nextIdx = i;
+    });
+    if(nextIdx > -1) ms[nextIdx]._next = true;
+    return ms;
+  }
 
-  var D = DATA.defaults || {};
-  var AGENDA_PAGE = DATA.source || 'https://www.bpd3.org/o/bpd3/page/regular-board-meeting';
-  window.MTG_MONTHS = ms.map(function(m){ return m.month; });
+  var ms = prep(DATA, false);
+  var as = ARCH ? prep(ARCH, true) : [];
 
-  /* ---- stats bar ---- */
-  var done = ms.filter(function(m){ return m._past; }).length;
-  var hearings = ms.filter(function(m){ return m.special; }).length;
-  var nextM = nextIdx > -1 ? ms[nextIdx] : null;
-  document.getElementById('sbar').innerHTML =
-    '<div class="sc gr"><div class="n">' + done + '</div><div class="l">Meetings<br/>Held</div></div>' +
-    '<div class="sc go"><div class="n">' + (ms.length - done) + '</div><div class="l">Meetings<br/>Remaining</div></div>' +
-    '<div class="sc"><div class="n">' + ms.length + '</div><div class="l">Total Meetings<br/>' + esc(DATA.yearLabel) + '</div></div>' +
-    '<div class="sc pu"><div class="n">' + hearings + '</div><div class="l">Special<br/>Hearings</div></div>' +
-    '<div class="sc ne"><div class="n">' + (nextM ? esc(nextM.short) : '&mdash;') + '</div><div class="l">' +
-      (nextM ? 'Next Meeting<br/>' + esc(D.time || '') : 'Schedule<br/>complete') + '</div></div>';
+  // One flat index across both grids so the notes modal can title itself.
+  var MONTHS = [];
+  ms.concat(as).forEach(function(m){ m._i = MONTHS.length; MONTHS.push(m.label); });
+  window.MTG_MONTHS = MONTHS;
 
-  /* ---- timeline ---- */
-  document.getElementById('tl-h').innerHTML =
-    '&#128336; ' + esc(DATA.yearLabel) + ' Meeting Timeline &mdash; all meetings at ' +
-    esc(D.location || '') + ', ' + esc(D.time || '');
-  document.getElementById('tl').innerHTML = ms.map(function(m,i){
-    var dot = m.special ? 'special' : (m._past ? 'past' : 'upcoming');
-    var st  = m._past ? '<span class="tl-s past">Held</span>'
-            : (m._next ? '<span class="tl-s upcoming">Next</span>'
-                       : '<span class="tl-s sched">Scheduled</span>');
-    return '<div class="tl-i"><div class="tl-d ' + dot + '" onclick="scrollToCard(\'m' + i + '\')" title="' +
-      esc(m.label) + '">' + esc(m.mon) + '</div><div class="tl-l">' + esc(m.short) + '</div>' +
-      '<div class="tl-dt">' + esc(m.special || m.type) + '</div>' + st + '</div>';
-  }).join('');
-  var srcbits = ['Schedule source: <a href="' + esc(DATA.schedulePage) + '" target="_blank" rel="noopener">bpd3.org board meetings page</a>'];
-  if(DATA.updated) srcbits.push('last checked ' + esc(DATA.updated));
-  (DATA.notes || []).forEach(function(n){ srcbits.push(esc(n)); });
-  document.getElementById('tl-src').innerHTML = srcbits.join(' &nbsp;|&nbsp; ');
-
-  /* ---- year at a glance ---- */
-  var agendas = ms.filter(function(m){ return m.agenda; }).length;
-  var minutes = ms.filter(function(m){ return m.minutes; }).length;
-  var summary = [
-    {l:'Held',             n:done,             c:'#2e7d32'},
-    {l:'Remaining',        n:ms.length - done, c:'#f5a623'},
-    {l:'Regular',          n:ms.filter(function(m){ return !m.special; }).length, c:'#1e9fa0'},
-    {l:'Special Hearings', n:hearings,         c:'#6a1b9a'},
-    {l:'Agendas Posted',   n:agendas,          c:'#1565c0'},
-    {l:'Minutes Posted',   n:minutes,          c:'#00695c'}
-  ];
-  document.getElementById('sum-h').innerHTML = '&#128202; Year at a Glance &mdash; ' + esc(DATA.yearLabel) + ' School Year';
-  document.getElementById('sumbars').innerHTML = summary.map(function(s){
-    var pct = ms.length ? Math.round(s.n / ms.length * 100) : 0;
-    return '<div class="ccol"><div class="cn" style="color:' + s.c + ';">' + s.n + '</div>' +
-      '<div class="cb" style="background:' + s.c + ';width:' + Math.max(pct,3) + '%;"></div>' +
-      '<div class="cl">' + s.l + '</div></div>';
-  }).join('');
-
-  /* ---- meeting cards ---- */
-  document.getElementById('cur-h').innerHTML = esc(DATA.yearLabel) + ' Board Meetings';
-  document.getElementById('cgrid').innerHTML = ms.map(function(m,i){
+  function card(m, data, prefix){
+    var D = data.defaults || {};
+    var page = data.source;
     var badges = [];
     if(m._past) badges.push('<span class="badge b-comp">&#10003; Meeting Held</span>');
     else if(m._next) badges.push('<span class="badge b-new">&#9654; Next Meeting</span>');
@@ -1143,31 +1211,97 @@ document.getElementById('modal').addEventListener('click', function(e){
              'before the meeting; this card fills in once it is available.</p>';
     }
 
-    var foot = [];
     var detailKeys = Object.keys(m.detail || {});
-    if(detailKeys.length) foot.push('<button class="bs bt2" onclick="toggleDetail(\'dm' + i + '\')">&#128269; View Details</button>');
-    foot.push('<a class="bs bo2" href="' + esc(m.agenda || AGENDA_PAGE) + '" target="_blank" rel="noopener">&#128196; ' +
+    var did = 'd' + prefix + m._i;
+    var foot = [];
+    if(detailKeys.length) foot.push('<button class="bs bt2" onclick="toggleDetail(\'' + did + '\')">&#128269; View Details</button>');
+    foot.push('<a class="bs bo2" href="' + esc(m.agenda || page) + '" target="_blank" rel="noopener">&#128196; ' +
               (m.agenda ? 'Agenda (PDF)' : 'Agendas &amp; Minutes') + '</a>');
-    if(m.minutes) foot.push('<a class="bs bg2" href="' + esc(m.minutes) + '" target="_blank" rel="noopener">&#128221; Minutes</a>');
-    foot.push('<button class="bs bgr2" onclick="openModal(' + i + ')">&#9998; Add Notes</button>');
+    if(m.minutes) foot.push('<a class="bs bg2" href="' + esc(m.minutes) + '" target="_blank" rel="noopener">&#128221; Minutes (PDF)</a>');
+    foot.push('<button class="bs bgr2" onclick="openModal(' + m._i + ')">&#9998; Add Notes</button>');
 
     var detail = '';
     if(detailKeys.length){
-      detail = '<div class="md" id="dm' + i + '">' + detailKeys.map(function(h){
+      detail = '<div class="md" id="' + did + '">' + detailKeys.map(function(h){
         return '<h4>' + esc(h) + '</h4><ul>' + m.detail[h].map(function(x){
           return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>'; }).join('') + '</div>';
     }
 
-    var whereLine = esc(m.label) + ' &nbsp;|&nbsp; ' + esc(D.time || '') + ' &nbsp;|&nbsp; ' + esc(D.location || '');
+    var where = esc(m.label) + ' &nbsp;|&nbsp; ' + esc(m.time || D.time || '') +
+                ' &nbsp;|&nbsp; ' + esc(m.location || D.location || '');
     var minNote = (!m.minutes && m.minutesNote) ? '<div class="minnote">' + esc(m.minutesNote) + '</div>' : '';
 
-    return '<div class="mc" id="m' + i + '" data-year="2026-27" data-cats="' + esc((m.cats || []).join(' ')) + '">' +
+    return '<div class="mc" id="' + prefix + m._i + '" data-cats="' + esc((m.cats || []).join(' ')) + '">' +
       '<div class="mch"><div class="mm">&#128197; ' + esc(m.month) + '</div>' +
-      '<div class="md2">' + whereLine + '</div>' +
+      '<div class="md2">' + where + '</div>' +
       '<div class="badges">' + badges.join('') + '</div>' + minNote + '</div>' +
       '<div class="mcb">' + (pills ? '<div class="pills">' + pills + '</div>' : '') + body + '</div>' +
       '<div class="mcf">' + foot.join('') + '</div>' + detail + '</div>';
+  }
+
+  /* ---- current year: stats, timeline, summary, cards ---- */
+  var D = DATA.defaults || {};
+  var done = ms.filter(function(m){ return m._past; }).length;
+  var hearings = ms.filter(function(m){ return m.special; }).length;
+  var nextM = ms.filter(function(m){ return m._next; })[0];
+  document.getElementById('sbar').innerHTML =
+    '<div class="sc gr"><div class="n">' + done + '</div><div class="l">Meetings<br/>Held</div></div>' +
+    '<div class="sc go"><div class="n">' + (ms.length - done) + '</div><div class="l">Meetings<br/>Remaining</div></div>' +
+    '<div class="sc"><div class="n">' + ms.length + '</div><div class="l">Total Meetings<br/>' + esc(DATA.yearLabel) + '</div></div>' +
+    '<div class="sc pu"><div class="n">' + hearings + '</div><div class="l">Special<br/>Hearings</div></div>' +
+    '<div class="sc ne"><div class="n">' + (nextM ? esc(nextM.short) : '&mdash;') + '</div><div class="l">' +
+      (nextM ? 'Next Meeting<br/>' + esc(D.time || '') : 'Schedule<br/>complete') + '</div></div>';
+
+  document.getElementById('tl-h').innerHTML =
+    '&#128336; ' + esc(DATA.yearLabel) + ' Meeting Timeline &mdash; all meetings at ' +
+    esc(D.location || '') + ', ' + esc(D.time || '');
+  document.getElementById('tl').innerHTML = ms.map(function(m){
+    var dot = m.special ? 'special' : (m._past ? 'past' : 'upcoming');
+    var st  = m._past ? '<span class="tl-s past">Held</span>'
+            : (m._next ? '<span class="tl-s upcoming">Next</span>'
+                       : '<span class="tl-s sched">Scheduled</span>');
+    return '<div class="tl-i"><div class="tl-d ' + dot + '" onclick="scrollToCard(\'m' + m._i + '\')" title="' +
+      esc(m.label) + '">' + esc(m.mon) + '</div><div class="tl-l">' + esc(m.short) + '</div>' +
+      '<div class="tl-dt">' + esc(m.special || m.type) + '</div>' + st + '</div>';
   }).join('');
+  var srcbits = ['Schedule source: <a href="' + esc(DATA.schedulePage) + '" target="_blank" rel="noopener">bpd3.org board meetings page</a>'];
+  if(DATA.updated) srcbits.push('last checked ' + esc(DATA.updated));
+  (DATA.notes || []).forEach(function(n){ srcbits.push(esc(n)); });
+  document.getElementById('tl-src').innerHTML = srcbits.join(' &nbsp;|&nbsp; ');
+
+  var summary = [
+    {l:'Held',             n:done,             c:'#2e7d32'},
+    {l:'Remaining',        n:ms.length - done, c:'#f5a623'},
+    {l:'Regular',          n:ms.filter(function(m){ return !m.special; }).length, c:'#1e9fa0'},
+    {l:'Special Hearings', n:hearings,         c:'#6a1b9a'},
+    {l:'Agendas Posted',   n:ms.filter(function(m){ return m.agenda; }).length,  c:'#1565c0'},
+    {l:'Minutes Posted',   n:ms.filter(function(m){ return m.minutes; }).length, c:'#00695c'}
+  ];
+  document.getElementById('sum-h').innerHTML = '&#128202; Year at a Glance &mdash; ' + esc(DATA.yearLabel) + ' School Year';
+  document.getElementById('sumbars').innerHTML = summary.map(function(s){
+    var pct = ms.length ? Math.round(s.n / ms.length * 100) : 0;
+    return '<div class="ccol"><div class="cn" style="color:' + s.c + ';">' + s.n + '</div>' +
+      '<div class="cb" style="background:' + s.c + ';width:' + Math.max(pct,3) + '%;"></div>' +
+      '<div class="cl">' + s.l + '</div></div>';
+  }).join('');
+
+  document.getElementById('cur-h').innerHTML = esc(DATA.yearLabel) + ' Board Meetings';
+  document.getElementById('cgrid').innerHTML = ms.map(function(m){ return card(m, DATA, 'm'); }).join('');
+
+  /* ---- archive ---- */
+  if(ARCH && as.length){
+    document.getElementById('arch-h').innerHTML = esc(ARCH.yearLabel) + ' Archive' +
+      '<button class="bs bo2 archtog" onclick="toggleArchive()" id="archbtn">Show ' + as.length + ' meetings</button>';
+    var counts = Object.keys(CATLABEL).map(function(c){
+      return {c:c, n:as.filter(function(m){ return (m.cats||[]).indexOf(c) > -1; }).length};
+    }).sort(function(a,b){ return b.n - a.n; });
+    document.getElementById('arch-note').innerHTML =
+      '<p>' + esc(ARCH.provenance || '') + '</p>' +
+      '<div class="archcats">' + counts.map(function(x){
+        return '<span class="archcat"><span class="cdot" style="background:' + CATCOLOR[x.c] +
+          ';"></span>' + CATLABEL[x.c] + ' <strong>' + x.n + '</strong></span>'; }).join('') + '</div>';
+    document.getElementById('archive-grid').innerHTML = as.map(function(m){ return card(m, ARCH, 'a'); }).join('');
+  }
 })();
 
 /* ---- filtering, scoped so archive cards stay hidden unless expanded ---- */
@@ -1206,8 +1340,9 @@ function doSearch(){ applyFilters(); }
 function toggleArchive(){
   var g = document.getElementById('archive-grid');
   var b = document.getElementById('archbtn');
+  var n = g.querySelectorAll('.mc').length;
   g.classList.toggle('archive-collapsed');
-  b.textContent = archiveOpen() ? 'Hide archive' : 'Show archive';
+  b.textContent = archiveOpen() ? 'Hide archive' : 'Show ' + n + ' meetings';
   applyFilters();
 }
 function openModal(i){
