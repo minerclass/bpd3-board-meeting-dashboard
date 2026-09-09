@@ -1,0 +1,215 @@
+{
+  "year": "2026-27",
+  "yearLabel": "2026–27",
+  "source": "https://www.bpd3.org/o/bpd3/page/regular-board-meeting",
+  "schedulePage": "https://www.bpd3.org/page/board-of-education-school-board-meetings",
+  "updated": "2026-09-08",
+  "defaults": {
+    "time": "6:30 PM",
+    "location": "Beach Park Middle School (Cafeteria)",
+    "address": "40667 N. Green Bay Rd., Beach Park, IL 60099"
+  },
+  "notes": [
+    "No regular board meeting in July 2027."
+  ],
+  "meetings": [
+    {
+      "date": "2026-08-10",
+      "label": "August 10, 2026",
+      "month": "August 2026",
+      "short": "Aug 10",
+      "mon": "Aug",
+      "type": "Regular",
+      "special": "Administrative Costs Hearing",
+      "agenda": "https://drive.google.com/file/d/1CuzSHOR97E79Bxxxa41m1p7bX9htwfb6/view",
+      "minutes": null,
+      "cats": [
+        "finance",
+        "personnel",
+        "curriculum",
+        "facilities",
+        "policy",
+        "community"
+      ],
+      "items": [
+        "Public hearing on the Resolution to Waive Limitation of Administrative Costs",
+        "Oath of office administered to newly appointed board member Mrs. Erika Snediker",
+        "Tentative Budget presentation (Director of Business/CSBO)",
+        "Superintendent's Report: Back to School Bash, registration, new hire orientation, institute days",
+        "Department reports and consent agenda; closed session on employment matters"
+      ],
+      "detail": {
+        "Hearing & Board Business": [
+          "Administrative Costs Resolution Hearing called to order ahead of the regular meeting",
+          "Public hearing of the Resolution to Waive Limitation of Administrative Costs",
+          "Oath of office administered to newly appointed board member Mrs. Erika Snediker"
+        ],
+        "Finance": [
+          "Tentative Budget presentation",
+          "Monthly financials (June) and monthly bills report",
+          "Consent agenda: approve monthly financials and bills"
+        ],
+        "Personnel": [
+          "Director of Human Resources personnel report",
+          "Consent agenda: approve personnel report",
+          "Closed session under 5 ILCS 120/2(c)(1) on appointment, employment, compensation and discipline"
+        ],
+        "Reports": [
+          "Board Long-Range Planning, Finance, and SEDOL committee reports",
+          "Assistant Superintendent of Academics and Operations",
+          "Directors of Teaching and Learning, Multilingual Programs, Buildings and Grounds, Innovation & Technology",
+          "District Parent & Community Relations Coordinator; FOIA requests"
+        ],
+        "Minutes Approved": [
+          "Regular and closed session minutes of June 15, 2026"
+        ]
+      },
+      "minutesNote": "Will be posted after they are approved at the September board meeting",
+      "sourceNote": "Summarized from the public August 10, 2026 agenda posted by the district."
+    },
+    {
+      "date": "2026-09-21",
+      "label": "September 21, 2026",
+      "month": "September 2026",
+      "short": "Sep 21",
+      "mon": "Sep",
+      "type": "Regular",
+      "special": "Budget Hearing",
+      "agenda": null,
+      "minutes": null,
+      "cats": [
+        "finance"
+      ],
+      "items": [],
+      "detail": {}
+    },
+    {
+      "date": "2026-10-19",
+      "label": "October 19, 2026",
+      "month": "October 2026",
+      "short": "Oct 19",
+      "mon": "Oct",
+      "type": "Regular",
+      "special": null,
+      "agenda": null,
+      "minutes": null,
+      "cats": [],
+      "items": [],
+      "detail": {}
+    },
+    {
+      "date": "2026-11-16",
+      "label": "November 16, 2026",
+      "month": "November 2026",
+      "short": "Nov 16",
+      "mon": "Nov",
+      "type": "Regular",
+      "special": null,
+      "agenda": null,
+      "minutes": null,
+      "cats": [],
+      "items": [],
+      "detail": {}
+    },
+    {
+      "date": "2026-12-14",
+      "label": "December 14, 2026",
+      "month": "December 2026",
+      "short": "Dec 14",
+      "mon": "Dec",
+      "type": "Regular",
+      "special": "Levy Hearing",
+      "agenda": null,
+      "minutes": null,
+      "cats": [
+        "finance"
+      ],
+      "items": [],
+      "detail": {}
+    },
+    {
+      "date": "2027-01-11",
+      "label": "January 11, 2027",
+      "month": "January 2027",
+      "short": "Jan 11",
+      "mon": "Jan",
+      "type": "Regular",
+      "special": null,
+      "agenda": null,
+      "minutes": null,
+      "cats": [],
+      "items": [],
+      "detail": {}
+    },
+    {
+      "date": "2027-02-08",
+      "label": "February 8, 2027",
+      "month": "February 2027",
+      "short": "Feb 8",
+      "mon": "Feb",
+      "type": "Regular",
+      "special": null,
+      "agenda": null,
+      "minutes": null,
+      "cats": [],
+      "items": [],
+      "detail": {}
+    },
+    {
+      "date": "2027-03-15",
+      "label": "March 15, 2027",
+      "month": "March 2027",
+      "short": "Mar 15",
+      "mon": "Mar",
+      "type": "Regular",
+      "special": null,
+      "agenda": null,
+      "minutes": null,
+      "cats": [],
+      "items": [],
+      "detail": {}
+    },
+    {
+      "date": "2027-04-19",
+      "label": "April 19, 2027",
+      "month": "April 2027",
+      "short": "Apr 19",
+      "mon": "Apr",
+      "type": "Regular",
+      "special": null,
+      "agenda": null,
+      "minutes": null,
+      "cats": [],
+      "items": [],
+      "detail": {}
+    },
+    {
+      "date": "2027-05-17",
+      "label": "May 17, 2027",
+      "month": "May 2027",
+      "short": "May 17",
+      "mon": "May",
+      "type": "Regular",
+      "special": null,
+      "agenda": null,
+      "minutes": null,
+      "cats": [],
+      "items": [],
+      "detail": {}
+    },
+    {
+      "date": "2027-06-21",
+      "label": "June 21, 2027",
+      "month": "June 2027",
+      "short": "Jun 21",
+      "mon": "Jun",
+      "type": "Regular",
+      "special": null,
+      "agenda": null,
+      "minutes": null,
+      "cats": [],
+      "items": [],
+      "detail": {}
+    }
+  ]
+}
