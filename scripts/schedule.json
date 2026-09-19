@@ -3,7 +3,7 @@
   "yearLabel": "2026–27",
   "source": "https://www.bpd3.org/o/bpd3/page/regular-board-meeting",
   "schedulePage": "https://www.bpd3.org/page/board-of-education-school-board-meetings",
-  "updated": "2026-09-08",
+  "updated": "2026-09-19",
   "defaults": {
     "time": "6:30 PM",
     "location": "Beach Park Middle School (Cafeteria)",
@@ -75,13 +75,14 @@
       "mon": "Sep",
       "type": "Regular",
       "special": "Budget Hearing",
-      "agenda": null,
+      "agenda": "https://drive.google.com/file/d/1sTGhNByZFXBJ1_asEsTlV4K9nXTmuKuV/view",
       "minutes": null,
       "cats": [
         "finance"
       ],
       "items": [],
-      "detail": {}
+      "detail": {},
+      "minutesNote": "Will be posted after they are approved at the October board meeting"
     },
     {
       "date": "2026-10-19",
