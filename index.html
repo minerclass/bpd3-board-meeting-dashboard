@@ -1269,6 +1269,10 @@ document.getElementById('modal').addEventListener('click', function(e){
         body += '<p class="basis-ag"><strong>From the published agenda.</strong> These items are ' +
                 'proposed, not decided \u2014 the board has to vote, and the summary is replaced once ' +
                 'the approved minutes are posted.</p>';
+      } else if(m.basis === 'notes'){
+        body += '<p class="basis-ag"><strong>From meeting notes, not the official record.</strong> ' +
+                'These outcomes were recorded as the meeting happened. The board still has to approve ' +
+                'the minutes, and this summary is replaced when it does.</p>';
       }
       if(m.sourceNote) body += '<p class="srcnote">' + esc(m.sourceNote) + '</p>';
     } else if(m.agenda){

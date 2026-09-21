@@ -259,6 +259,38 @@ def main() -> int:
         if was and was != now:
             print('  ~ documents changed: %s %s -> %s' % (m['date'], was, now))
 
+    # A card still summarized from an agenda or from meeting notes, whose
+    # minutes have now been posted, is standing in for the official record.
+    # Surface it: rewrite the summary from the minutes and flip `basis`.
+    pending = [m for m in updated['meetings']
+               if m.get('basis') in ('agenda', 'notes') and m.get('minutes')]
+    if pending:
+        print('')
+        print('RECONCILE: %d card(s) not based on approved minutes now have '
+              'minutes posted:' % len(pending))
+        for m in pending:
+            print('RECONCILE:   %s  %s' % (m['date'], m['minutes']))
+        print('RECONCILE: rewrite items/detail from the minutes and set '
+              'basis to "minutes".')
+        print('')
+    # Written for the workflow to hand straight to `gh issue --body-file`.
+    # Empty when there is nothing to reconcile.
+    with open(os.path.join(ROOT, 'reconcile-needed.md'), 'w',
+              encoding='utf-8', newline='\n') as fh:
+        if pending:
+            fh.write(
+                'These meeting cards are not based on approved minutes, but the '
+                'minutes are now posted:\n\n')
+            for m in pending:
+                fh.write('- %s &mdash; [minutes](%s)\n' % (m['label'], m['minutes']))
+            fh.write(
+                '\nAn agenda lists what was *proposed*; minutes record what the '
+                'board *did*. For each meeting above, rewrite `items` and `detail` '
+                'in `scripts/schedule.json` from the minutes, set `basis` to '
+                '`"minutes"`, update `sourceNote`, then run '
+                '`python scripts/update_schedule.py`.\n\n'
+                'Opened automatically by `.github/workflows/update-schedule.yml`.\n')
+
     print('%d meetings parsed; %s' % (len(updated['meetings']),
                                       'changes found' if changed else 'no changes'))
     blob = json.dumps(updated, indent=2, ensure_ascii=False)

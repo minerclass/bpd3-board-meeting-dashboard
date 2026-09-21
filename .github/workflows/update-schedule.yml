@@ -17,6 +17,8 @@ on:
 
 permissions:
   contents: write
+  # Opening the reconciliation reminder issue.
+  issues: write
 
 concurrency:
   group: update-schedule
@@ -52,3 +54,29 @@ jobs:
           git push
           echo "### Schedule updated" >> "$GITHUB_STEP_SUMMARY"
           git show --stat --oneline HEAD >> "$GITHUB_STEP_SUMMARY"
+
+      # A card still summarized from its agenda, whose minutes have now been
+      # posted, presents proposals as though they were the record. Open one
+      # issue so the rewrite is not left to memory; later runs reuse it.
+      - name: Flag cards needing reconciliation
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITLE: Reconcile agenda-based cards against approved minutes
+        run: |
+          if [ ! -s reconcile-needed.md ]; then
+            echo "Nothing awaiting reconciliation."
+            exit 0
+          fi
+          {
+            echo "### Minutes posted — reconciliation needed"
+            cat reconcile-needed.md
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          existing=$(gh issue list --state open --search "$TITLE in:title" \
+                       --json number --jq '.[0].number // empty')
+          if [ -n "$existing" ]; then
+            echo "Updating existing issue #$existing."
+            gh issue edit "$existing" --body-file reconcile-needed.md
+          else
+            gh issue create --title "$TITLE" --body-file reconcile-needed.md
+          fi

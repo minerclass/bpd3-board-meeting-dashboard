@@ -82,12 +82,20 @@ Set `basis` to say which a summary came from:
   board still has to vote, and the summary will be replaced once minutes are
   approved. Use this for a meeting that has not happened yet, and for one whose
   minutes are still awaiting approval at the following meeting.
+- `"notes"` adds a caveat that the outcomes were recorded as the meeting
+  happened but the board has not approved the minutes yet. Use this the morning
+  after a meeting, before the official record exists.
 - `"minutes"` (or omitting the field) presents the summary as the record.
 
 Getting this backwards is the failure mode this dashboard is most prone to, so
 the updater carries `basis` across runs rather than letting a refresh quietly
 turn a proposal into a decision. When minutes are published, rewrite `items` and
 `detail` from them and switch `basis` to `"minutes"`.
+
+You do not have to remember to do that. When a card marked `"agenda"` or
+`"notes"` gains a minutes link, the daily workflow opens (or updates) a single
+GitHub issue listing exactly which meetings need rewriting, and the run summary
+says the same. The reminder clears when the last card is switched over.
 
 ## Closing out a school year
 
