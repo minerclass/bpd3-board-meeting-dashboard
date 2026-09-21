@@ -5,7 +5,7 @@ Reads the district's two public board-meeting pages, extracts the regular
 meeting schedule plus any posted agenda/minutes links, merges the result into
 scripts/schedule.json, and rewrites the embedded JSON block in index.html.
 
-Hand-written fields on a meeting (items, detail, cats, sourceNote) are preserved
+Hand-written fields on a meeting (items, detail, cats, sourceNote, basis) are preserved
 across runs -- this script only owns the schedule facts: date, label, agenda
 link, minutes link, and the "minutes pending" note. A hand-added special-hearing
 label survives only while the district's own schedule list does not supply one.
@@ -174,6 +174,11 @@ def build(schedule: dict, docs: dict, previous: dict) -> dict:
             meeting['minutesNote'] = note
         if prev.get('sourceNote'):
             meeting['sourceNote'] = prev['sourceNote']
+        # 'agenda' means the summary describes proposed items; 'minutes' means it
+        # describes what the board did. Carried over so a run never silently
+        # turns a proposal into a decision.
+        if prev.get('basis'):
+            meeting['basis'] = prev['basis']
         meetings.append(meeting)
 
     year, year_label = school_year(list(schedule))
@@ -235,6 +240,10 @@ def main() -> int:
 
     updated = build(schedule, docs, previous)
     changed = comparable(updated) != comparable(previous)
+    if not changed:
+        # Keep the stamp still on a no-op run, so the serialized form stays
+        # byte-identical to what is on disk and a daily check produces no churn.
+        updated['updated'] = previous.get('updated', updated['updated'])
 
     old_dates = {m['date'] for m in previous.get('meetings', [])}
     new_dates = {m['date'] for m in updated['meetings']}
@@ -252,27 +261,38 @@ def main() -> int:
 
     print('%d meetings parsed; %s' % (len(updated['meetings']),
                                       'changes found' if changed else 'no changes'))
-    if args.check:
-        return 1 if changed else 0
-    if not changed:
-        return 0
-
     blob = json.dumps(updated, indent=2, ensure_ascii=False)
-    with open(DATA_PATH, 'w', encoding='utf-8', newline='\n') as fh:
-        fh.write(blob + '\n')
 
+    # index.html embeds a copy of the data. It can fall behind schedule.json
+    # even when nothing upstream moved -- hand-editing the JSON to add a
+    # summary is the normal way that happens -- so sync it on its own merits.
     with open(INDEX_PATH, encoding='utf-8') as fh:
         index = fh.read()
-    if not BLOCK_RE.search(index):
+    block = BLOCK_RE.search(index)
+    if not block:
         print('ERROR: could not find the #mtg-data block in index.html',
               file=sys.stderr)
         return 4
+    stale = block.group(2).strip() != blob.strip()
+    if stale:
+        print('  ~ index.html is behind scripts/schedule.json')
+
+    if args.check:
+        return 1 if (changed or stale) else 0
+    if not changed and not stale:
+        return 0
+
+    # Write both from the same blob so the two copies never disagree, including
+    # on the "last checked" stamp.
+    with open(DATA_PATH, 'w', encoding='utf-8', newline='\n') as fh:
+        fh.write(blob + '\n')
     index = BLOCK_RE.sub(
         lambda m: m.group(1) + blob + m.group(3), index, count=1)
     with open(INDEX_PATH, 'w', encoding='utf-8', newline='\n') as fh:
         fh.write(index)
 
-    print('wrote scripts/schedule.json and index.html')
+    print('wrote %s' % ('scripts/schedule.json and index.html' if changed
+                        else 'index.html (re-synced from scripts/schedule.json)'))
     return 0
 
 

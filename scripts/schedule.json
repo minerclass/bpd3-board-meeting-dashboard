@@ -65,7 +65,8 @@
         ]
       },
       "minutesNote": "Will be posted after they are approved at the September board meeting",
-      "sourceNote": "Summarized from the public August 10, 2026 agenda posted by the district."
+      "sourceNote": "Summarized from the public August 10, 2026 agenda posted by the district.",
+      "basis": "agenda"
     },
     {
       "date": "2026-09-21",
@@ -78,11 +79,62 @@
       "agenda": "https://drive.google.com/file/d/1sTGhNByZFXBJ1_asEsTlV4K9nXTmuKuV/view",
       "minutes": null,
       "cats": [
-        "finance"
+        "finance",
+        "personnel",
+        "policy",
+        "curriculum",
+        "facilities",
+        "community"
       ],
-      "items": [],
-      "detail": {},
-      "minutesNote": "Will be posted after they are approved at the October board meeting"
+      "items": [
+        "Public hearing on the proposed FY27 budget, with adoption of the 2026-2027 budget listed for action afterward",
+        "Possible appointment of a board member to fill the vacancy left by Andy Luther's resignation, effective August 17, 2026",
+        "2026-2027 Board Goals up for approval, alongside the Student Resource Officer contract",
+        "Two policies up for approval: 7:180 bullying, intimidation and harassment, and 2:150 school board committees",
+        "Administrative contracts, district office salaries, and the FY27 administrator and teacher salary and benefits report listed for action"
+      ],
+      "detail": {
+        "Budget Hearing": [
+          "Public hearing of the proposed FY27 budget, with a presentation and budget form",
+          "Questions and comments from visitors, then the hearing adjourns into the regular meeting",
+          "Approval of the 2026-2027 budget is listed as an action item later in the agenda"
+        ],
+        "Superintendent's Report": [
+          "Building a Legacy",
+          "2026-2027 Board Goals",
+          "IASB 2026 Resolutions Committee Report"
+        ],
+        "Board Membership": [
+          "Acknowledgment of the resignation of board member Andy Luther, effective August 17, 2026",
+          "Closed session includes the selection of a person to fill a vacancy in a public office under 5 ILCS 120/2(c)(3)",
+          "Possible appointment of a board member to fill the vacancy is listed as an action item"
+        ],
+        "Action Items Listed": [
+          "Approval of the 2026-2027 budget",
+          "Approval of the 2026-2027 Student Resource Officer contract",
+          "Approval of the FY27 administrator and teachers salary and benefits report",
+          "Approval of the 2026-2027 Board Goals",
+          "Approval of Policy 7:180, prevention of and response to bullying, intimidation and harassment",
+          "Approval of Policy 2:150, school board committees",
+          "Approval of administrative contracts for the 2026-2027 school year",
+          "Approval of 2026-2027 district office salaries",
+          "Possible appointment of a board of education member to fill the vacancy"
+        ],
+        "Consent Agenda": [
+          "Monthly financials (July and August) and bills",
+          "Personnel report",
+          "Regular and closed session minutes of August 10, 2026"
+        ],
+        "Attending": [
+          "Doors open at 6:15 p.m.; the meeting begins at 6:30 p.m. at Beach Park Middle School (Cafeteria)",
+          "A live stream is available, and the electronic public comment form is open 6:00-6:30 p.m. on meeting day",
+          "To address the board in person, submit a request form at the sign-in table before the meeting starts (5 minutes per speaker)",
+          "Translator requests: contact the District Parent and Community Relations Coordinator at 847-599-5029 at least three days ahead"
+        ]
+      },
+      "minutesNote": "Will be posted after they are approved at the October board meeting",
+      "sourceNote": "Summarized from the September 21, 2026 agenda published by the district. Minutes are expected after approval at the October 19 meeting.",
+      "basis": "agenda"
     },
     {
       "date": "2026-10-19",

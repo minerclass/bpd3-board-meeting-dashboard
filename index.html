@@ -83,6 +83,8 @@ body{font-family:'Inter',sans-serif;background:#f0fafa;color:#1a1a2e;}
 .b-upco{background:#f3e5f5;color:var(--pur);}
 .b-spec{background:#fff3e0;color:var(--ora);border:1px solid var(--gold);}
 .b-new{background:#e8f5e9;color:var(--green);border:1px solid var(--green);}
+.b-today{background:var(--gold);color:#3a2a00;border:1px solid #d4891a;font-weight:800;}
+.tl-s.today{background:var(--gold);color:#3a2a00;font-weight:800;}
 .mcb{padding:14px 18px;}
 .pills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;}
 .pl{padding:4px 9px;border-radius:999px;font-size:.68rem;font-weight:800;line-height:1.2;}
@@ -158,6 +160,7 @@ body{font-family:'Inter',sans-serif;background:#f0fafa;color:#1a1a2e;}
 .archive-collapsed{display:none!important;}
 .pending{font-size:.78rem;color:#6b7f7f;line-height:1.6;background:#f8fcfc;border:1px dashed #cfe6e6;border-radius:8px;padding:11px 12px;}
 .srcnote{font-size:.68rem;color:#7b8f8f;line-height:1.6;margin-top:9px;font-style:italic;}
+.basis-ag{font-size:.7rem;color:#8a5a00;line-height:1.6;margin-top:10px;background:#fff8e1;border-left:3px solid var(--gold);border-radius:0 6px 6px 0;padding:8px 10px;}
 .minnote{font-size:.68rem;color:#8a6d3b;margin-top:7px;line-height:1.5;}
 @media print{.archtog{display:none!important;} .archive-collapsed{display:grid!important;}}
 </style>
@@ -262,7 +265,8 @@ body{font-family:'Inter',sans-serif;background:#f0fafa;color:#1a1a2e;}
         ]
       },
       "minutesNote": "Will be posted after they are approved at the September board meeting",
-      "sourceNote": "Summarized from the public August 10, 2026 agenda posted by the district."
+      "sourceNote": "Summarized from the public August 10, 2026 agenda posted by the district.",
+      "basis": "agenda"
     },
     {
       "date": "2026-09-21",
@@ -275,11 +279,62 @@ body{font-family:'Inter',sans-serif;background:#f0fafa;color:#1a1a2e;}
       "agenda": "https://drive.google.com/file/d/1sTGhNByZFXBJ1_asEsTlV4K9nXTmuKuV/view",
       "minutes": null,
       "cats": [
-        "finance"
+        "finance",
+        "personnel",
+        "policy",
+        "curriculum",
+        "facilities",
+        "community"
       ],
-      "items": [],
-      "detail": {},
-      "minutesNote": "Will be posted after they are approved at the October board meeting"
+      "items": [
+        "Public hearing on the proposed FY27 budget, with adoption of the 2026-2027 budget listed for action afterward",
+        "Possible appointment of a board member to fill the vacancy left by Andy Luther's resignation, effective August 17, 2026",
+        "2026-2027 Board Goals up for approval, alongside the Student Resource Officer contract",
+        "Two policies up for approval: 7:180 bullying, intimidation and harassment, and 2:150 school board committees",
+        "Administrative contracts, district office salaries, and the FY27 administrator and teacher salary and benefits report listed for action"
+      ],
+      "detail": {
+        "Budget Hearing": [
+          "Public hearing of the proposed FY27 budget, with a presentation and budget form",
+          "Questions and comments from visitors, then the hearing adjourns into the regular meeting",
+          "Approval of the 2026-2027 budget is listed as an action item later in the agenda"
+        ],
+        "Superintendent's Report": [
+          "Building a Legacy",
+          "2026-2027 Board Goals",
+          "IASB 2026 Resolutions Committee Report"
+        ],
+        "Board Membership": [
+          "Acknowledgment of the resignation of board member Andy Luther, effective August 17, 2026",
+          "Closed session includes the selection of a person to fill a vacancy in a public office under 5 ILCS 120/2(c)(3)",
+          "Possible appointment of a board member to fill the vacancy is listed as an action item"
+        ],
+        "Action Items Listed": [
+          "Approval of the 2026-2027 budget",
+          "Approval of the 2026-2027 Student Resource Officer contract",
+          "Approval of the FY27 administrator and teachers salary and benefits report",
+          "Approval of the 2026-2027 Board Goals",
+          "Approval of Policy 7:180, prevention of and response to bullying, intimidation and harassment",
+          "Approval of Policy 2:150, school board committees",
+          "Approval of administrative contracts for the 2026-2027 school year",
+          "Approval of 2026-2027 district office salaries",
+          "Possible appointment of a board of education member to fill the vacancy"
+        ],
+        "Consent Agenda": [
+          "Monthly financials (July and August) and bills",
+          "Personnel report",
+          "Regular and closed session minutes of August 10, 2026"
+        ],
+        "Attending": [
+          "Doors open at 6:15 p.m.; the meeting begins at 6:30 p.m. at Beach Park Middle School (Cafeteria)",
+          "A live stream is available, and the electronic public comment form is open 6:00-6:30 p.m. on meeting day",
+          "To address the board in person, submit a request form at the sign-in table before the meeting starts (5 minutes per speaker)",
+          "Translator requests: contact the District Parent and Community Relations Coordinator at 847-599-5029 at least three days ahead"
+        ]
+      },
+      "minutesNote": "Will be posted after they are approved at the October board meeting",
+      "sourceNote": "Summarized from the September 21, 2026 agenda published by the district. Minutes are expected after approval at the October 19 meeting.",
+      "basis": "agenda"
     },
     {
       "date": "2026-10-19",
@@ -1174,6 +1229,7 @@ document.getElementById('modal').addEventListener('click', function(e){
     var nextIdx = -1;
     ms.forEach(function(m,i){
       m._past = allPast || asDate(m.date) < today;
+      m._today = !allPast && asDate(m.date).getTime() === today.getTime();
       if(!m._past && nextIdx === -1) nextIdx = i;
     });
     if(nextIdx > -1) ms[nextIdx]._next = true;
@@ -1193,6 +1249,7 @@ document.getElementById('modal').addEventListener('click', function(e){
     var page = data.source;
     var badges = [];
     if(m._past) badges.push('<span class="badge b-comp">&#10003; Meeting Held</span>');
+    else if(m._today) badges.push('<span class="badge b-today">&#128226; Meeting Tonight</span>');
     else if(m._next) badges.push('<span class="badge b-new">&#9654; Next Meeting</span>');
     else badges.push('<span class="badge b-upco">&#128197; Scheduled</span>');
     if(m.special) badges.push('<span class="badge b-spec">&#11088; ' + esc(m.special) + '</span>');
@@ -1206,7 +1263,17 @@ document.getElementById('modal').addEventListener('click', function(e){
     if(m.items && m.items.length){
       body = '<ul class="acts">' + m.items.map(function(it,k){
         return '<li' + (k === 0 ? ' class="highlight"' : '') + '>' + esc(it) + '</li>'; }).join('') + '</ul>';
+      // An agenda says what is proposed; minutes say what the board did. Never
+      // let the first be read as the second.
+      if(m.basis === 'agenda'){
+        body += '<p class="basis-ag"><strong>From the published agenda.</strong> These items are ' +
+                'proposed, not decided \u2014 the board has to vote, and the summary is replaced once ' +
+                'the approved minutes are posted.</p>';
+      }
       if(m.sourceNote) body += '<p class="srcnote">' + esc(m.sourceNote) + '</p>';
+    } else if(m.agenda){
+      body = '<p class="pending">The agenda for this meeting is posted \u2014 open the PDF below. ' +
+             'A summary appears here once it has been read against the agenda.</p>';
     } else {
       body = '<p class="pending">Agenda not yet published. The district posts each agenda at least 48 hours ' +
              'before the meeting; this card fills in once it is available.</p>';
@@ -1251,7 +1318,7 @@ document.getElementById('modal').addEventListener('click', function(e){
     '<div class="sc"><div class="n">' + ms.length + '</div><div class="l">Total Meetings<br/>' + esc(DATA.yearLabel) + '</div></div>' +
     '<div class="sc pu"><div class="n">' + hearings + '</div><div class="l">Special<br/>Hearings</div></div>' +
     '<div class="sc ne"><div class="n">' + (nextM ? esc(nextM.short) : '&mdash;') + '</div><div class="l">' +
-      (nextM ? 'Next Meeting<br/>' + esc(D.time || '') : 'Schedule<br/>complete') + '</div></div>';
+      (nextM ? (nextM._today ? 'Meeting Tonight<br/>' : 'Next Meeting<br/>') + esc(D.time || '') : 'Schedule<br/>complete') + '</div></div>';
 
   document.getElementById('tl-h').innerHTML =
     '&#128336; ' + esc(DATA.yearLabel) + ' Meeting Timeline &mdash; all meetings at ' +
@@ -1259,8 +1326,9 @@ document.getElementById('modal').addEventListener('click', function(e){
   document.getElementById('tl').innerHTML = ms.map(function(m){
     var dot = m.special ? 'special' : (m._past ? 'past' : 'upcoming');
     var st  = m._past ? '<span class="tl-s past">Held</span>'
+            : (m._today ? '<span class="tl-s today">Tonight</span>'
             : (m._next ? '<span class="tl-s upcoming">Next</span>'
-                       : '<span class="tl-s sched">Scheduled</span>');
+                       : '<span class="tl-s sched">Scheduled</span>'));
     return '<div class="tl-i"><div class="tl-d ' + dot + '" onclick="scrollToCard(\'m' + m._i + '\')" title="' +
       esc(m.label) + '">' + esc(m.mon) + '</div><div class="tl-l">' + esc(m.short) + '</div>' +
       '<div class="tl-dt">' + esc(m.special || m.type) + '</div>' + st + '</div>';

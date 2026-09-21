@@ -67,9 +67,27 @@ hand-edit in `scripts/schedule.json` and survive every run:
 - `cats` — category tags (`finance`, `curriculum`, `personnel`, `facilities`, `policy`, `community`) that drive the filters
 - `sourceNote` — the attribution line under the summary
 - `special` — a hearing label, kept until the district's own schedule supplies one
+- `basis` — `"agenda"` or `"minutes"`, see below
 
 After editing the JSON, run `python scripts/update_schedule.py` to copy it into
-`index.html`.
+`index.html`. The script re-syncs the embedded block whenever it has fallen
+behind `scripts/schedule.json`, even when nothing upstream changed.
+
+### Agenda or minutes
+
+An agenda lists what is **proposed**; minutes record what the board **did**.
+Set `basis` to say which a summary came from:
+
+- `"agenda"` adds a visible caveat to the card — the items are proposed, the
+  board still has to vote, and the summary will be replaced once minutes are
+  approved. Use this for a meeting that has not happened yet, and for one whose
+  minutes are still awaiting approval at the following meeting.
+- `"minutes"` (or omitting the field) presents the summary as the record.
+
+Getting this backwards is the failure mode this dashboard is most prone to, so
+the updater carries `basis` across runs rather than letting a refresh quietly
+turn a proposal into a decision. When minutes are published, rewrite `items` and
+`detail` from them and switch `basis` to `"minutes"`.
 
 ## Closing out a school year
 
