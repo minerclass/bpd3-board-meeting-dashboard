@@ -3,7 +3,7 @@
   "yearLabel": "2026–27",
   "source": "https://www.bpd3.org/o/bpd3/page/regular-board-meeting",
   "schedulePage": "https://www.bpd3.org/page/board-of-education-school-board-meetings",
-  "updated": "2026-09-19",
+  "updated": "2026-10-16",
   "defaults": {
     "time": "6:30 PM",
     "location": "Beach Park Middle School (Cafeteria)",
@@ -22,7 +22,7 @@
       "type": "Regular",
       "special": "Administrative Costs Hearing",
       "agenda": "https://drive.google.com/file/d/1CuzSHOR97E79Bxxxa41m1p7bX9htwfb6/view",
-      "minutes": null,
+      "minutes": "https://drive.google.com/file/d/1sMOLvP5hTAHFhojUtPpBksrmccIXkRpI/view",
       "cats": [
         "finance",
         "personnel",
@@ -64,7 +64,6 @@
           "Regular and closed session minutes of June 15, 2026"
         ]
       },
-      "minutesNote": "Will be posted after they are approved at the September board meeting",
       "sourceNote": "Summarized from the public August 10, 2026 agenda posted by the district.",
       "basis": "agenda"
     },
@@ -144,11 +143,12 @@
       "mon": "Oct",
       "type": "Regular",
       "special": null,
-      "agenda": null,
+      "agenda": "https://drive.google.com/file/d/1uKFzwoOO4rh9rtVt6VKCtHRwa3Y0-ZxN/view",
       "minutes": null,
       "cats": [],
       "items": [],
-      "detail": {}
+      "detail": {},
+      "minutesNote": "Will be posted after they are approved at the November board meeting"
     },
     {
       "date": "2026-11-16",
